@@ -1,0 +1,773 @@
+﻿<!DOCTYPE HTML>
+<html><head>
+   <title>sgCore version 2.0 manual</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+   body {  } 
+       .heading1 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading2 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading3 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading4 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading5 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading6 { font-size: 10pt; color: #000000; text-decoration: none; }
+
+       .hilight1 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight2 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight3 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight4 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight5 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight6 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+
+       /* TOC LIST CSS */
+       #toc    { padding:0; margin:0 }
+       #toc li { margin-top:2px; margin-left:0; padding:1px }
+       #toc ul { padding-left:0; margin-left:0px }       
+       /* TOC LIST CSS */
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body>
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="welcometopic.html" target="hmcontent"><span class="heading1" id="s1">Introduction</span></a>
+</li>
+<li class="heading1" id="i2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="begin.html" target="hmcontent"><span class="heading1" id="s2">Work with sgCore</span></a>
+</li>
+<li class="heading1" id="i3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="functions.html" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">Functions</span></a>
+<ul id="ul3" style="list-style-type:none">
+<li class="heading2" id="i3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="sginitkernel.html" target="hmcontent"><span class="heading2" id="s3.1">sgInitKernel</span></a>
+</li>
+<li class="heading2" id="i3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.2" href="sgfreekernel.html" target="hmcontent"><span class="heading2" id="s3.2">sgFreeKernel</span></a>
+</li>
+<li class="heading2" id="i3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.3" href="sggetversion.html" target="hmcontent"><span class="heading2" id="s3.3">sgGetVersion</span></a>
+</li>
+<li class="heading2" id="i3.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.4" href="sggetlasterror.html" target="hmcontent"><span class="heading2" id="s3.4">sgGetLastError</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="geometries.html" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">Geometries</span></a>
+<ul id="ul4" style="list-style-type:none">
+<li class="heading2" id="i4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.1" href="sg_point.html" target="hmcontent"><span class="heading2" id="s4.1">SG_POINT</span></a>
+</li>
+<li class="heading2" id="i4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.2" href="sg_vector.html" target="hmcontent"><span class="heading2" id="s4.2">SG_VECTOR</span></a>
+</li>
+<li class="heading2" id="i4.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.3" href="sg_line.html" target="hmcontent"><span class="heading2" id="s4.3">SG_LINE</span></a>
+</li>
+<li class="heading2" id="i4.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.4" href="sg_circle.html" target="hmcontent"><span class="heading2" id="s4.4">SG_CIRCLE</span></a>
+</li>
+<li class="heading2" id="i4.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.5" href="sg_arc.html" target="hmcontent"><span class="heading2" id="s4.5">SG_ARC</span></a>
+</li>
+<li class="heading2" id="i4.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.6" href="sg_spline.html" target="hmcontent"><span class="heading2" id="s4.6">SG_SPLINE</span></a>
+</li>
+<li class="heading2" id="i4.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.7" href="sg_box.html" target="hmcontent"><span class="heading2" id="s4.7">SG_BOX</span></a>
+</li>
+<li class="heading2" id="i4.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.8" href="sg_sphere.html" target="hmcontent"><span class="heading2" id="s4.8">SG_SPHERE</span></a>
+</li>
+<li class="heading2" id="i4.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.9" href="sg_cylinder.html" target="hmcontent"><span class="heading2" id="s4.9">SG_CYLINDER</span></a>
+</li>
+<li class="heading2" id="i4.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.10" href="sg_cone.html" target="hmcontent"><span class="heading2" id="s4.10">SG_CONE</span></a>
+</li>
+<li class="heading2" id="i4.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.11" href="sg_torus.html" target="hmcontent"><span class="heading2" id="s4.11">SG_TORUS</span></a>
+</li>
+<li class="heading2" id="i4.12" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.12" href="sg_ellipsoid.html" target="hmcontent"><span class="heading2" id="s4.12">SG_ELLIPSOID</span></a>
+</li>
+<li class="heading2" id="i4.13" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.13" href="sg_spheric_band.html" target="hmcontent"><span class="heading2" id="s4.13">SG_SPHERIC_BAND</span></a>
+</li>
+<li class="heading2" id="i4.14" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.14" href="exttypesgeometries.html" target="hmcontent"><span class="heading2" id="s4.14" ondblclick="return dblclicked(this)">Additional types</span></a>
+<ul id="ul4.14" style="list-style-type:none">
+<li class="heading3" id="i4.14.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.14.1" href="sg_draw_line_func.html" target="hmcontent"><span class="heading3" id="s4.14.1">SG_DRAW_LINE_FUNC</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="ierarh.html" target="hmcontent"><span class="heading1" id="s5" ondblclick="return dblclicked(this)">Objects</span></a>
+<ul id="ul5" style="list-style-type:none">
+<li class="heading2" id="i5.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.1" href="sgcobject.html" target="hmcontent"><span class="heading2" id="s5.1" ondblclick="return dblclicked(this)">sgCObject</span></a>
+<ul id="ul5.1" style="list-style-type:none">
+<li class="heading3" id="i5.1.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.1.1" href="methods_sgcobj.html" target="hmcontent"><span class="heading3" id="s5.1.1" ondblclick="return dblclicked(this)">Methods</span></a>
+<ul id="ul5.1.1" style="list-style-type:none">
+<li class="heading4" id="i5.1.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.1" href="sgcobject_clone.html" target="hmcontent"><span class="heading4" id="s5.1.1.1">Clone</span></a>
+</li>
+<li class="heading4" id="i5.1.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.2" href="sgcobject_gettype.html" target="hmcontent"><span class="heading4" id="s5.1.1.2">GetType</span></a>
+</li>
+<li class="heading4" id="i5.1.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.3" href="sgcobject_setusergeometry.html" target="hmcontent"><span class="heading4" id="s5.1.1.3">SetUserGeometry</span></a>
+</li>
+<li class="heading4" id="i5.1.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.4" href="sgcobject_getusergeometry.html" target="hmcontent"><span class="heading4" id="s5.1.1.4">GetUserGeometry</span></a>
+</li>
+<li class="heading4" id="i5.1.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.5" href="sgcobject_getusergeometryid.html" target="hmcontent"><span class="heading4" id="s5.1.1.5">GetUserGeometryID</span></a>
+</li>
+<li class="heading4" id="i5.1.1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.6" href="sgcobject_setuserdynamicdata.html" target="hmcontent"><span class="heading4" id="s5.1.1.6">SetUserDynamicData</span></a>
+</li>
+<li class="heading4" id="i5.1.1.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.7" href="sgcobject_getuserdynamicdata.html" target="hmcontent"><span class="heading4" id="s5.1.1.7">GetUserDynamicData</span></a>
+</li>
+<li class="heading4" id="i5.1.1.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.8" href="sgcobject_getattribute.html" target="hmcontent"><span class="heading4" id="s5.1.1.8">GetAttribute</span></a>
+</li>
+<li class="heading4" id="i5.1.1.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.9" href="sgcobject_setattribute.html" target="hmcontent"><span class="heading4" id="s5.1.1.9">SetAttribute</span></a>
+</li>
+<li class="heading4" id="i5.1.1.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.10" href="sgcobejct_getname.html" target="hmcontent"><span class="heading4" id="s5.1.1.10">GetName</span></a>
+</li>
+<li class="heading4" id="i5.1.1.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.11" href="sgcobject_setname.html" target="hmcontent"><span class="heading4" id="s5.1.1.11">SetName</span></a>
+</li>
+<li class="heading4" id="i5.1.1.12" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.12" href="sgcobject_getparent.html" target="hmcontent"><span class="heading4" id="s5.1.1.12">GetParent</span></a>
+</li>
+<li class="heading4" id="i5.1.1.13" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.13" href="sgcobject_getgabarits.html" target="hmcontent"><span class="heading4" id="s5.1.1.13">GetGabarits</span></a>
+</li>
+<li class="heading4" id="i5.1.1.14" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.14" href="sgcobject_select.html" target="hmcontent"><span class="heading4" id="s5.1.1.14">Select</span></a>
+</li>
+<li class="heading4" id="i5.1.1.15" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.15" href="sgcobject_isselect.html" target="hmcontent"><span class="heading4" id="s5.1.1.15">IsSelect</span></a>
+</li>
+<li class="heading4" id="i5.1.1.16" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.16" href="sgcobject_isattachedtoscene.html" target="hmcontent"><span class="heading4" id="s5.1.1.16">IsAttachedToScene</span></a>
+</li>
+<li class="heading4" id="i5.1.1.17" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.17" href="sgcobject_inittempmatrix.html" target="hmcontent"><span class="heading4" id="s5.1.1.17">InitTempMatrix</span></a>
+</li>
+<li class="heading4" id="i5.1.1.18" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.18" href="sgcobject_destroytempmatrix.html" target="hmcontent"><span class="heading4" id="s5.1.1.18">DestroyTempMatrix</span></a>
+</li>
+<li class="heading4" id="i5.1.1.19" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.19" href="sgcobject_gettempmatrix.html" target="hmcontent"><span class="heading4" id="s5.1.1.19">GetTempMatrix</span></a>
+</li>
+<li class="heading4" id="i5.1.1.20" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.20" href="sgcobject_applytempmatrix.html" target="hmcontent"><span class="heading4" id="s5.1.1.20">ApplyTempMatrix</span></a>
+</li>
+<li class="heading4" id="i5.1.1.21" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.1.21" href="sgcobject_deleteobject.html" target="hmcontent"><span class="heading4" id="s5.1.1.21">DeleteObject</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i5.1.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.1.2" href="sgcpoint.html" target="hmcontent"><span class="heading3" id="s5.1.2" ondblclick="return dblclicked(this)">sgCPoint</span></a>
+<ul id="ul5.1.2" style="list-style-type:none">
+<li class="heading4" id="i5.1.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.2.1" href="sgcpoint_create.html" target="hmcontent"><span class="heading4" id="s5.1.2.1">Create</span></a>
+</li>
+<li class="heading4" id="i5.1.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.2.2" href="sgcpoint_getgeometry.html" target="hmcontent"><span class="heading4" id="s5.1.2.2">GetGeometry</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i5.1.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.1.3" href="sgc2dobject.html" target="hmcontent"><span class="heading3" id="s5.1.3" ondblclick="return dblclicked(this)">sgC2DObject</span></a>
+<ul id="ul5.1.3" style="list-style-type:none">
+<li class="heading4" id="i5.1.3.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.3.1" href="sgc2d_metods.html" target="hmcontent"><span class="heading4" id="s5.1.3.1" ondblclick="return dblclicked(this)">Methods</span></a>
+<ul id="ul5.1.3.1" style="list-style-type:none">
+<li class="heading5" id="i5.1.3.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.1" href="2d_isclosed.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.1">IsClosed</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.2" href="2d_isplane.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.2">IsPlane</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.3" href="2d_islinear.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.3">IsLinear</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.4" href="2d_isselfintersecting.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.4">IsSelfIntersecting</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.5" href="2d_getequidistantcontour.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.5">GetEquidistantContour</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.6" href="2d_getorient.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.6">GetOrient</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.7" href="2d_changeorient.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.7">ChangeOrient</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.8" href="2d_getpointfromcoefficient.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.8">GetPointFromCoefficient</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.9" href="2d_isobjectsononeplane.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.9">IsObjectsOnOnePlane</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.10" href="2d_isobjectsintersecting.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.10">IsObjectsIntersecting</span></a>
+</li>
+<li class="heading5" id="i5.1.3.1.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.1.11" href="2d_isfirstobjectinsidesecond.html" target="hmcontent"><span class="heading5" id="s5.1.3.1.11">IsFirstObjectInsideSecondObject</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.3.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.3.2" href="sgcline.html" target="hmcontent"><span class="heading4" id="s5.1.3.2" ondblclick="return dblclicked(this)">sgCLine</span></a>
+<ul id="ul5.1.3.2" style="list-style-type:none">
+<li class="heading5" id="i5.1.3.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.2.1" href="sgcline_create.html" target="hmcontent"><span class="heading5" id="s5.1.3.2.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.3.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.2.2" href="sgcline_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.3.2.2">GetGeometry</span></a>
+</li>
+<li class="heading5" id="i5.1.3.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.2.3" href="sgcline_isclosed.html" target="hmcontent"><span class="heading5" id="s5.1.3.2.3">IsClosed</span></a>
+</li>
+<li class="heading5" id="i5.1.3.2.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.2.4" href="sgcline_isplane.html" target="hmcontent"><span class="heading5" id="s5.1.3.2.4">IsPlane</span></a>
+</li>
+<li class="heading5" id="i5.1.3.2.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.2.5" href="sgcline_islinear.html" target="hmcontent"><span class="heading5" id="s5.1.3.2.5">IsLinear</span></a>
+</li>
+<li class="heading5" id="i5.1.3.2.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.2.6" href="sgcline_isselfintersecting.html" target="hmcontent"><span class="heading5" id="s5.1.3.2.6">IsSelfIntersecting</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.3.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.3.3" href="sgccircle.html" target="hmcontent"><span class="heading4" id="s5.1.3.3" ondblclick="return dblclicked(this)">sgCCircle</span></a>
+<ul id="ul5.1.3.3" style="list-style-type:none">
+<li class="heading5" id="i5.1.3.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.3.1" href="sgccircle_create.html" target="hmcontent"><span class="heading5" id="s5.1.3.3.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.3.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.3.2" href="sgccircle_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.3.3.2">GetGeometry</span></a>
+</li>
+<li class="heading5" id="i5.1.3.3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.3.3" href="sgccircle_getpointscount.html" target="hmcontent"><span class="heading5" id="s5.1.3.3.3">GetPointsCount</span></a>
+</li>
+<li class="heading5" id="i5.1.3.3.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.3.4" href="sgccircle_getpoints.html" target="hmcontent"><span class="heading5" id="s5.1.3.3.4">GetPoints</span></a>
+</li>
+<li class="heading5" id="i5.1.3.3.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.3.5" href="sgccircle_isclosed.html" target="hmcontent"><span class="heading5" id="s5.1.3.3.5">IsClosed</span></a>
+</li>
+<li class="heading5" id="i5.1.3.3.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.3.6" href="sgccircle_isplane.html" target="hmcontent"><span class="heading5" id="s5.1.3.3.6">IsPlane</span></a>
+</li>
+<li class="heading5" id="i5.1.3.3.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.3.7" href="sgccircle_islinear.html" target="hmcontent"><span class="heading5" id="s5.1.3.3.7">IsLinear</span></a>
+</li>
+<li class="heading5" id="i5.1.3.3.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.3.8" href="sgccircle_isselfintersecting.html" target="hmcontent"><span class="heading5" id="s5.1.3.3.8">IsSelfIntersecting</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.3.4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.3.4" href="sgcarc.html" target="hmcontent"><span class="heading4" id="s5.1.3.4" ondblclick="return dblclicked(this)">sgCArc</span></a>
+<ul id="ul5.1.3.4" style="list-style-type:none">
+<li class="heading5" id="i5.1.3.4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.4.1" href="sgcarc_create.html" target="hmcontent"><span class="heading5" id="s5.1.3.4.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.3.4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.4.2" href="sgcarc_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.3.4.2">GetGeometry</span></a>
+</li>
+<li class="heading5" id="i5.1.3.4.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.4.3" href="sgcarc_getpointscount.html" target="hmcontent"><span class="heading5" id="s5.1.3.4.3">GetPointsCount</span></a>
+</li>
+<li class="heading5" id="i5.1.3.4.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.4.4" href="sgcarc_getpoints.html" target="hmcontent"><span class="heading5" id="s5.1.3.4.4">GetPoints</span></a>
+</li>
+<li class="heading5" id="i5.1.3.4.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.4.5" href="sgcarc_isclosed.html" target="hmcontent"><span class="heading5" id="s5.1.3.4.5">IsClosed</span></a>
+</li>
+<li class="heading5" id="i5.1.3.4.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.4.6" href="sgcarc_isplane.html" target="hmcontent"><span class="heading5" id="s5.1.3.4.6">IsPlane</span></a>
+</li>
+<li class="heading5" id="i5.1.3.4.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.4.7" href="sgcarc_islinear.html" target="hmcontent"><span class="heading5" id="s5.1.3.4.7">IsLinear</span></a>
+</li>
+<li class="heading5" id="i5.1.3.4.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.4.8" href="sgcarc_isselfintersecting.html" target="hmcontent"><span class="heading5" id="s5.1.3.4.8">IsSelfIntersecting</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.3.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.3.5" href="sgcspline.html" target="hmcontent"><span class="heading4" id="s5.1.3.5" ondblclick="return dblclicked(this)">sgCSpline</span></a>
+<ul id="ul5.1.3.5" style="list-style-type:none">
+<li class="heading5" id="i5.1.3.5.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.5.1" href="sgcspline_create.html" target="hmcontent"><span class="heading5" id="s5.1.3.5.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.3.5.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.5.2" href="sgcspline_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.3.5.2">GetGeometry</span></a>
+</li>
+<li class="heading5" id="i5.1.3.5.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.5.3" href="sgcspline_isclosed.html" target="hmcontent"><span class="heading5" id="s5.1.3.5.3">IsClosed</span></a>
+</li>
+<li class="heading5" id="i5.1.3.5.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.5.4" href="sgcspline_isplane.html" target="hmcontent"><span class="heading5" id="s5.1.3.5.4">IsPlane</span></a>
+</li>
+<li class="heading5" id="i5.1.3.5.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.5.5" href="sgcspline_islinear.html" target="hmcontent"><span class="heading5" id="s5.1.3.5.5">IsLinear</span></a>
+</li>
+<li class="heading5" id="i5.1.3.5.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.5.6" href="sgcspline_isselfintersecting.html" target="hmcontent"><span class="heading5" id="s5.1.3.5.6">IsSelfIntersecting</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.3.6" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.3.6" href="sgccontour.html" target="hmcontent"><span class="heading4" id="s5.1.3.6" ondblclick="return dblclicked(this)">sgCContour</span></a>
+<ul id="ul5.1.3.6" style="list-style-type:none">
+<li class="heading5" id="i5.1.3.6.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.6.1" href="sgccontour_createcontour.html" target="hmcontent"><span class="heading5" id="s5.1.3.6.1">CreateContour</span></a>
+</li>
+<li class="heading5" id="i5.1.3.6.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.6.2" href="sgccontour_breakcontour.html" target="hmcontent"><span class="heading5" id="s5.1.3.6.2">BreakContour</span></a>
+</li>
+<li class="heading5" id="i5.1.3.6.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.6.3" href="sgccontour_getchildrenlist.html" target="hmcontent"><span class="heading5" id="s5.1.3.6.3">GetChildrenList</span></a>
+</li>
+<li class="heading5" id="i5.1.3.6.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.6.4" href="sgccontour_isclosed.html" target="hmcontent"><span class="heading5" id="s5.1.3.6.4">IsClosed</span></a>
+</li>
+<li class="heading5" id="i5.1.3.6.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.6.5" href="sgccontour_isplane.html" target="hmcontent"><span class="heading5" id="s5.1.3.6.5">IsPlane</span></a>
+</li>
+<li class="heading5" id="i5.1.3.6.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.6.6" href="sgccontour_islinear.html" target="hmcontent"><span class="heading5" id="s5.1.3.6.6">IsLinear</span></a>
+</li>
+<li class="heading5" id="i5.1.3.6.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.6.7" href="sgccontour_isselfintersecting.html" target="hmcontent"><span class="heading5" id="s5.1.3.6.7">IsSelfIntersecting</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.3.7" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.3.7" href="exttypes2d.html" target="hmcontent"><span class="heading4" id="s5.1.3.7" ondblclick="return dblclicked(this)">Additional types</span></a>
+<ul id="ul5.1.3.7" style="list-style-type:none">
+<li class="heading5" id="i5.1.3.7.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.3.7.1" href="sg_2d_object_orient.html" target="hmcontent"><span class="heading5" id="s5.1.3.7.1">SG_2D_OBJECT_ORIENT</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i5.1.4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.1.4" href="sgc3dobject.html" target="hmcontent"><span class="heading3" id="s5.1.4" ondblclick="return dblclicked(this)">sgC3DObject</span></a>
+<ul id="ul5.1.4" style="list-style-type:none">
+<li class="heading4" id="i5.1.4.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.4.1" href="sg3d_metods.html" target="hmcontent"><span class="heading4" id="s5.1.4.1" ondblclick="return dblclicked(this)">Methods</span></a>
+<ul id="ul5.1.4.1" style="list-style-type:none">
+<li class="heading5" id="i5.1.4.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.1.1" href="3d_get3dobjecttype.html" target="hmcontent"><span class="heading5" id="s5.1.4.1.1">Get3DObjectType</span></a>
+</li>
+<li class="heading5" id="i5.1.4.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.1.2" href="3d_autotriangulate.html" target="hmcontent"><span class="heading5" id="s5.1.4.1.2">AutoTriangulate</span></a>
+</li>
+<li class="heading5" id="i5.1.4.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.1.3" href="3d_triangulate.html" target="hmcontent"><span class="heading5" id="s5.1.4.1.3">Triangulate</span></a>
+</li>
+<li class="heading5" id="i5.1.4.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.1.4" href="3d_gettriangles.html" target="hmcontent"><span class="heading5" id="s5.1.4.1.4">GetTriangles</span></a>
+</li>
+<li class="heading5" id="i5.1.4.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.1.5" href="3d_getworldmatrixdata.html" target="hmcontent"><span class="heading5" id="s5.1.4.1.5">GetWorldMatrixData</span></a>
+</li>
+<li class="heading5" id="i5.1.4.1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.1.6" href="3d_setmaterial.html" target="hmcontent"><span class="heading5" id="s5.1.4.1.6">SetMaterial</span></a>
+</li>
+<li class="heading5" id="i5.1.4.1.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.1.7" href="3d_getmaterial.html" target="hmcontent"><span class="heading5" id="s5.1.4.1.7">GetMaterial</span></a>
+</li>
+<li class="heading5" id="i5.1.4.1.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.1.8" href="3d_getvolume.html" target="hmcontent"><span class="heading5" id="s5.1.4.1.8">GetVolume</span></a>
+</li>
+<li class="heading5" id="i5.1.4.1.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.1.9" href="3d_getsquare.html" target="hmcontent"><span class="heading5" id="s5.1.4.1.9">GetSquare</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.4.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.4.2" href="sgcbox.html" target="hmcontent"><span class="heading4" id="s5.1.4.2" ondblclick="return dblclicked(this)">sgCBox</span></a>
+<ul id="ul5.1.4.2" style="list-style-type:none">
+<li class="heading5" id="i5.1.4.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.2.1" href="sgcbox_create.html" target="hmcontent"><span class="heading5" id="s5.1.4.2.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.4.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.2.2" href="sgcbox_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.4.2.2">GetGeometry</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.4.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.4.3" href="sgcsphere.html" target="hmcontent"><span class="heading4" id="s5.1.4.3" ondblclick="return dblclicked(this)">sgCSphere</span></a>
+<ul id="ul5.1.4.3" style="list-style-type:none">
+<li class="heading5" id="i5.1.4.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.3.1" href="sgcsphere_create.html" target="hmcontent"><span class="heading5" id="s5.1.4.3.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.4.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.3.2" href="sgcsphere_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.4.3.2">GetGeometry</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.4.4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.4.4" href="sgccylinder.html" target="hmcontent"><span class="heading4" id="s5.1.4.4" ondblclick="return dblclicked(this)">sgCCylinder</span></a>
+<ul id="ul5.1.4.4" style="list-style-type:none">
+<li class="heading5" id="i5.1.4.4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.4.1" href="sgccyl_create.html" target="hmcontent"><span class="heading5" id="s5.1.4.4.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.4.4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.4.2" href="sgccyl_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.4.4.2">GetGeometry</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.4.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.4.5" href="sgccone.html" target="hmcontent"><span class="heading4" id="s5.1.4.5" ondblclick="return dblclicked(this)">sgCCone</span></a>
+<ul id="ul5.1.4.5" style="list-style-type:none">
+<li class="heading5" id="i5.1.4.5.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.5.1" href="sgccone_create.html" target="hmcontent"><span class="heading5" id="s5.1.4.5.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.4.5.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.5.2" href="sgccone_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.4.5.2">GetGeometry</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.4.6" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.4.6" href="sgctorus.html" target="hmcontent"><span class="heading4" id="s5.1.4.6" ondblclick="return dblclicked(this)">sgCTorus</span></a>
+<ul id="ul5.1.4.6" style="list-style-type:none">
+<li class="heading5" id="i5.1.4.6.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.6.1" href="sgctor_create.html" target="hmcontent"><span class="heading5" id="s5.1.4.6.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.4.6.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.6.2" href="sgctor_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.4.6.2">GetGeometry</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.4.7" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.4.7" href="sgcellipsoid.html" target="hmcontent"><span class="heading4" id="s5.1.4.7" ondblclick="return dblclicked(this)">sgCEllipsoid</span></a>
+<ul id="ul5.1.4.7" style="list-style-type:none">
+<li class="heading5" id="i5.1.4.7.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.7.1" href="sgcellips_create.html" target="hmcontent"><span class="heading5" id="s5.1.4.7.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.4.7.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.7.2" href="sgcellips_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.4.7.2">GetGeometry</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.4.8" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.4.8" href="sgcsphericband.html" target="hmcontent"><span class="heading4" id="s5.1.4.8" ondblclick="return dblclicked(this)">sgCSphericBand</span></a>
+<ul id="ul5.1.4.8" style="list-style-type:none">
+<li class="heading5" id="i5.1.4.8.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.8.1" href="sgspb_create.html" target="hmcontent"><span class="heading5" id="s5.1.4.8.1">Create</span></a>
+</li>
+<li class="heading5" id="i5.1.4.8.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.8.2" href="sgspb_getgeometry.html" target="hmcontent"><span class="heading5" id="s5.1.4.8.2">GetGeometry</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i5.1.4.9" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.4.9" href="exttypes3d.html" target="hmcontent"><span class="heading4" id="s5.1.4.9" ondblclick="return dblclicked(this)">Additional types</span></a>
+<ul id="ul5.1.4.9" style="list-style-type:none">
+<li class="heading5" id="i5.1.4.9.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.9.1" href="3d_sgtriangulationtype.html" target="hmcontent"><span class="heading5" id="s5.1.4.9.1">SG_TRIANGULATION_TYPE</span></a>
+</li>
+<li class="heading5" id="i5.1.4.9.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.9.2" href="sgcbreppiece.html" target="hmcontent"><span class="heading5" id="s5.1.4.9.2" ondblclick="return dblclicked(this)">sgCBRepPiece</span></a>
+<ul id="ul5.1.4.9.2" style="list-style-type:none">
+<li class="heading6" id="i5.1.4.9.2.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.2.1" href="sgcbreppiece_metods.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.2.1" ondblclick="return dblclicked(this)">Methods</span></a>
+<ul id="ul5.1.4.9.2.1" style="list-style-type:none">
+<li class="heading6" id="i5.1.4.9.2.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.2.1.1" href="sgcbreppiece_getlocalgabarits.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.2.1.1">GetLocalGabarits</span></a>
+</li>
+<li class="heading6" id="i5.1.4.9.2.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.2.1.2" href="sgcbreppiece_getvertexes.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.2.1.2">GetVertexes</span></a>
+</li>
+<li class="heading6" id="i5.1.4.9.2.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.2.1.3" href="sgcbreppiece_getvertexescount.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.2.1.3">GetVertexesCount</span></a>
+</li>
+<li class="heading6" id="i5.1.4.9.2.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.2.1.4" href="sgcbreppiece_getedges.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.2.1.4">GetEdges</span></a>
+</li>
+<li class="heading6" id="i5.1.4.9.2.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.2.1.5" href="sgcbreppiece_getedgescount.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.2.1.5">GetEdgesCount</span></a>
+</li>
+<li class="heading6" id="i5.1.4.9.2.1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.2.1.6" href="sgcbreppiece_gettrianglesrange.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.2.1.6">GetTrianglesRange</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading5" id="i5.1.4.9.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a5.1.4.9.3" href="sgcbrep.html" target="hmcontent"><span class="heading5" id="s5.1.4.9.3" ondblclick="return dblclicked(this)">SgCBRep</span></a>
+<ul id="ul5.1.4.9.3" style="list-style-type:none">
+<li class="heading6" id="i5.1.4.9.3.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.3.1" href="sgcbrep_metods.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.3.1" ondblclick="return dblclicked(this)">Methods</span></a>
+<ul id="ul5.1.4.9.3.1" style="list-style-type:none">
+<li class="heading6" id="i5.1.4.9.3.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.3.1.1" href="sgcbrep_getpiecescount.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.3.1.1">GetPiecesCount</span></a>
+</li>
+<li class="heading6" id="i5.1.4.9.3.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a5.1.4.9.3.1.2" href="sgcbrep_getpiece.html" target="hmcontent"><span class="heading6" id="s5.1.4.9.3.1.2">GetPiece</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i5.1.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.1.5" href="sgcgroup.html" target="hmcontent"><span class="heading3" id="s5.1.5" ondblclick="return dblclicked(this)">sgCGroup</span></a>
+<ul id="ul5.1.5" style="list-style-type:none">
+<li class="heading4" id="i5.1.5.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.5.1" href="sgcgroup_creategroup.html" target="hmcontent"><span class="heading4" id="s5.1.5.1">CreateGroup</span></a>
+</li>
+<li class="heading4" id="i5.1.5.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.5.2" href="sgcgroup_breakgroup.html" target="hmcontent"><span class="heading4" id="s5.1.5.2">BreakGroup</span></a>
+</li>
+<li class="heading4" id="i5.1.5.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.5.3" href="sgcgroup_getchildrenlist.html" target="hmcontent"><span class="heading4" id="s5.1.5.3">GetChildrenList</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i5.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.2" href="exttypesobjects.html" target="hmcontent"><span class="heading2" id="s5.2" ondblclick="return dblclicked(this)">Additional types</span></a>
+<ul id="ul5.2" style="list-style-type:none">
+<li class="heading3" id="i5.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.2.1" href="sg_object_type.html" target="hmcontent"><span class="heading3" id="s5.2.1">SG_OBJECT_TYPE</span></a>
+</li>
+<li class="heading3" id="i5.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.2.2" href="iobjectslist.html" target="hmcontent"><span class="heading3" id="s5.2.2">IObjectsList</span></a>
+</li>
+<li class="heading3" id="i5.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.2.3" href="sguserdynamicdata.html" target="hmcontent"><span class="heading3" id="s5.2.3">SG_USER_DYNAMIC_DATA</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i6" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a6" href="sgcmatrix.html" target="hmcontent"><span class="heading1" id="s6" ondblclick="return dblclicked(this)">sgCMatrix</span></a>
+<ul id="ul6" style="list-style-type:none">
+<li class="heading2" id="i6.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.1" href="sgcmatrix_contr.html" target="hmcontent"><span class="heading2" id="s6.1">Constructor and destructor</span></a>
+</li>
+<li class="heading2" id="i6.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.2" href="sgcmatrix_operator.html" target="hmcontent"><span class="heading2" id="s6.2">operator=</span></a>
+</li>
+<li class="heading2" id="i6.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.3" href="sgcmatrix_setmatrix.html" target="hmcontent"><span class="heading2" id="s6.3">SetMatrix</span></a>
+</li>
+<li class="heading2" id="i6.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.4" href="sgcmatrix_getdata.html" target="hmcontent"><span class="heading2" id="s6.4">GetData</span></a>
+</li>
+<li class="heading2" id="i6.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.5" href="sgcmatrix_gettransparentdata.html" target="hmcontent"><span class="heading2" id="s6.5">GetTransparentData</span></a>
+</li>
+<li class="heading2" id="i6.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.6" href="sgcmatrix_identity.html" target="hmcontent"><span class="heading2" id="s6.6">Identity</span></a>
+</li>
+<li class="heading2" id="i6.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.7" href="sgcmatrix_transparent.html" target="hmcontent"><span class="heading2" id="s6.7">Transparent</span></a>
+</li>
+<li class="heading2" id="i6.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.8" href="sgcmatrix_inverse.html" target="hmcontent"><span class="heading2" id="s6.8">Inverse</span></a>
+</li>
+<li class="heading2" id="i6.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.9" href="sgcmatrix_multiply.html" target="hmcontent"><span class="heading2" id="s6.9">Multiply</span></a>
+</li>
+<li class="heading2" id="i6.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.10" href="sgcmatrix_translate.html" target="hmcontent"><span class="heading2" id="s6.10">Translate</span></a>
+</li>
+<li class="heading2" id="i6.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.11" href="sgcmatrix_rotate.html" target="hmcontent"><span class="heading2" id="s6.11">Rotate</span></a>
+</li>
+<li class="heading2" id="i6.12" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.12" href="sgcmatrix_vectortozaxe.html" target="hmcontent"><span class="heading2" id="s6.12">VectorToZAxe</span></a>
+</li>
+<li class="heading2" id="i6.13" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.13" href="sgcmatrix_applymatrixtovector.html" target="hmcontent"><span class="heading2" id="s6.13">ApplyMatrixToVector</span></a>
+</li>
+<li class="heading2" id="i6.14" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.14" href="sgcmatrix_applymatrixtopoint.html" target="hmcontent"><span class="heading2" id="s6.14">ApplyMatrixToPoint</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i7" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a7" href="sgspacemath.html" target="hmcontent"><span class="heading1" id="s7" ondblclick="return dblclicked(this)">sgSpaceMath</span></a>
+<ul id="ul7" style="list-style-type:none">
+<li class="heading2" id="i7.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.1" href="sgsm_ispointsononeline.html" target="hmcontent"><span class="heading2" id="s7.1">IsPointsOnOneLine</span></a>
+</li>
+<li class="heading2" id="i7.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.2" href="sgsm_pointsdistance.html" target="hmcontent"><span class="heading2" id="s7.2">PointsDistance</span></a>
+</li>
+<li class="heading2" id="i7.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.3" href="sgsm_normalvector.html" target="hmcontent"><span class="heading2" id="s7.3">NormalVector</span></a>
+</li>
+<li class="heading2" id="i7.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.4" href="sgsm_vectorsadd.html" target="hmcontent"><span class="heading2" id="s7.4">VectorsAdd</span></a>
+</li>
+<li class="heading2" id="i7.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.5" href="sgsm_vectorssub.html" target="hmcontent"><span class="heading2" id="s7.5">VectorsSub</span></a>
+</li>
+<li class="heading2" id="i7.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.6" href="sgsm_vectorsscalarmult.html" target="hmcontent"><span class="heading2" id="s7.6">VectorsScalarMult</span></a>
+</li>
+<li class="heading2" id="i7.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.7" href="sgsm_vectorsvectormult.html" target="hmcontent"><span class="heading2" id="s7.7">VectorsVectorMult</span></a>
+</li>
+<li class="heading2" id="i7.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.8" href="projectpointtolineandgetdist.html" target="hmcontent"><span class="heading2" id="s7.8">ProjectPointToLineAndGetDist</span></a>
+</li>
+<li class="heading2" id="i7.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.9" href="sgsm_intersectplaneandline.html" target="hmcontent"><span class="heading2" id="s7.9">IntersectPlaneAndLine</span></a>
+</li>
+<li class="heading2" id="i7.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.10" href="sgsm_issegmentsintersecting.html" target="hmcontent"><span class="heading2" id="s7.10">IsSegmentsIntersecting</span></a>
+</li>
+<li class="heading2" id="i7.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.11" href="sgsm_planefrompoints.html" target="hmcontent"><span class="heading2" id="s7.11">PlaneFromPoints</span></a>
+</li>
+<li class="heading2" id="i7.12" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.12" href="sgsm_planefromnormalandpoint.html" target="hmcontent"><span class="heading2" id="s7.12">PlaneFromNormalAndPoint</span></a>
+</li>
+<li class="heading2" id="i7.13" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.13" href="sgsm_getplanepointdistance.html" target="hmcontent"><span class="heading2" id="s7.13">GetPlanePointDistance</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i8" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a8" href="sgcscene.html" target="hmcontent"><span class="heading1" id="s8" ondblclick="return dblclicked(this)">sgCScene</span></a>
+<ul id="ul8" style="list-style-type:none">
+<li class="heading2" id="i8.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.1" href="sgcscene_getscene.html" target="hmcontent"><span class="heading2" id="s8.1">GetScene</span></a>
+</li>
+<li class="heading2" id="i8.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.2" href="sgcscene_getobjectslist.html" target="hmcontent"><span class="heading2" id="s8.2">GetObjectsList</span></a>
+</li>
+<li class="heading2" id="i8.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.3" href="sgcscen_getselectedobjectslist.html" target="hmcontent"><span class="heading2" id="s8.3">GetSelectedObjectsList</span></a>
+</li>
+<li class="heading2" id="i8.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.4" href="sgcscene_attachobject.html" target="hmcontent"><span class="heading2" id="s8.4">AttachObject</span></a>
+</li>
+<li class="heading2" id="i8.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.5" href="sgcscene_detachobject.html" target="hmcontent"><span class="heading2" id="s8.5">DetachObject</span></a>
+</li>
+<li class="heading2" id="i8.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.6" href="sgcscene_startundogroup.html" target="hmcontent"><span class="heading2" id="s8.6">StartUndoGroup</span></a>
+</li>
+<li class="heading2" id="i8.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.7" href="sgcscene_endundogroup.html" target="hmcontent"><span class="heading2" id="s8.7">EndUndoGroup</span></a>
+</li>
+<li class="heading2" id="i8.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.8" href="sgcscene_isundostackempty.html" target="hmcontent"><span class="heading2" id="s8.8">IsUndoStackEmpty</span></a>
+</li>
+<li class="heading2" id="i8.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.9" href="sgcscene_isredostackempty.html" target="hmcontent"><span class="heading2" id="s8.9">IsRedoStackEmpty</span></a>
+</li>
+<li class="heading2" id="i8.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.10" href="sgcscene_undo.html" target="hmcontent"><span class="heading2" id="s8.10">Undo</span></a>
+</li>
+<li class="heading2" id="i8.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.11" href="sgcscene_redo.html" target="hmcontent"><span class="heading2" id="s8.11">Redo</span></a>
+</li>
+<li class="heading2" id="i8.12" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.12" href="sgcscene_clear.html" target="hmcontent"><span class="heading2" id="s8.12">Clear</span></a>
+</li>
+<li class="heading2" id="i8.13" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.13" href="sgcscene_getgabarits.html" target="hmcontent"><span class="heading2" id="s8.13">GetGabarits</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i9" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a9" href="algs.html" target="hmcontent"><span class="heading1" id="s9" ondblclick="return dblclicked(this)">Algorithms</span></a>
+<ul id="ul9" style="list-style-type:none">
+<li class="heading2" id="i9.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.1" href="sgboolean.html" target="hmcontent"><span class="heading2" id="s9.1" ondblclick="return dblclicked(this)">sgBoolean</span></a>
+<ul id="ul9.1" style="list-style-type:none">
+<li class="heading3" id="i9.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.1.1" href="sgbool_intersection.html" target="hmcontent"><span class="heading3" id="s9.1.1">Intersection</span></a>
+</li>
+<li class="heading3" id="i9.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.1.2" href="sgbool_union.html" target="hmcontent"><span class="heading3" id="s9.1.2">Union</span></a>
+</li>
+<li class="heading3" id="i9.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.1.3" href="sgbool_sub.html" target="hmcontent"><span class="heading3" id="s9.1.3">Sub</span></a>
+</li>
+<li class="heading3" id="i9.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.1.4" href="sgbool_intersectioncontour.html" target="hmcontent"><span class="heading3" id="s9.1.4">IntersectionContour</span></a>
+</li>
+<li class="heading3" id="i9.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.1.5" href="sgbool_section.html" target="hmcontent"><span class="heading3" id="s9.1.5">Section</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.2" href="sgkinematic.html" target="hmcontent"><span class="heading2" id="s9.2" ondblclick="return dblclicked(this)">sgKinematic</span></a>
+<ul id="ul9.2" style="list-style-type:none">
+<li class="heading3" id="i9.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.1" href="sgkin_rotation.html" target="hmcontent"><span class="heading3" id="s9.2.1">Rotation</span></a>
+</li>
+<li class="heading3" id="i9.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.2" href="sgkin_extrude.html" target="hmcontent"><span class="heading3" id="s9.2.2">Extrude</span></a>
+</li>
+<li class="heading3" id="i9.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.3" href="sgkin_spiral.html" target="hmcontent"><span class="heading3" id="s9.2.3">Spiral</span></a>
+</li>
+<li class="heading3" id="i9.2.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.2.4" href="sgkin_pipe.html" target="hmcontent"><span class="heading3" id="s9.2.4">Pipe</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i9.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.3" href="sgsurfaces.html" target="hmcontent"><span class="heading2" id="s9.3" ondblclick="return dblclicked(this)">sgSurfaces</span></a>
+<ul id="ul9.3" style="list-style-type:none">
+<li class="heading3" id="i9.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.3.1" href="sgsur_face.html" target="hmcontent"><span class="heading3" id="s9.3.1">Face</span></a>
+</li>
+<li class="heading3" id="i9.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.3.2" href="sgsur_coons.html" target="hmcontent"><span class="heading3" id="s9.3.2">Coons</span></a>
+</li>
+<li class="heading3" id="i9.3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.3.3" href="sgsur_mesh.html" target="hmcontent"><span class="heading3" id="s9.3.3">Mesh</span></a>
+</li>
+<li class="heading3" id="i9.3.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.3.4" href="sgsur_sewsurfaces.html" target="hmcontent"><span class="heading3" id="s9.3.4">SewSurfaces</span></a>
+</li>
+<li class="heading3" id="i9.3.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.3.5" href="sgsu_linearsurfacefromsections.html" target="hmcontent"><span class="heading3" id="s9.3.5">LinearSurfaceFromSections</span></a>
+</li>
+<li class="heading3" id="i9.3.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.3.6" href="sgsu_splinesurfacefromsections.html" target="hmcontent"><span class="heading3" id="s9.3.6">SplineSurfaceFromSections</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i10" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a10" href="sgcfont.html" target="hmcontent"><span class="heading1" id="s10" ondblclick="return dblclicked(this)">sgCFont</span></a>
+<ul id="ul10" style="list-style-type:none">
+<li class="heading2" id="i10.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.1" href="sgcfont_loadfont.html" target="hmcontent"><span class="heading2" id="s10.1">LoadFont</span></a>
+</li>
+<li class="heading2" id="i10.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.2" href="sgcfont_unloadfont.html" target="hmcontent"><span class="heading2" id="s10.2">UnloadFont</span></a>
+</li>
+<li class="heading2" id="i10.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.3" href="sgcfont_getfontdata.html" target="hmcontent"><span class="heading2" id="s10.3">GetFontData</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i11" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a11" href="sgfontmanager.html" target="hmcontent"><span class="heading1" id="s11" ondblclick="return dblclicked(this)">sgFontManager</span></a>
+<ul id="ul11" style="list-style-type:none">
+<li class="heading2" id="i11.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.1" href="sgfm_attachfont.html" target="hmcontent"><span class="heading2" id="s11.1">AttachFont</span></a>
+</li>
+<li class="heading2" id="i11.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.2" href="sgfm_getfontscount.html" target="hmcontent"><span class="heading2" id="s11.2">GetFontsCount</span></a>
+</li>
+<li class="heading2" id="i11.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.3" href="sgfm_getfont.html" target="hmcontent"><span class="heading2" id="s11.3">GetFont</span></a>
+</li>
+<li class="heading2" id="i11.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.4" href="sgfm_setcurrentfont.html" target="hmcontent"><span class="heading2" id="s11.4">SetCurrentFont</span></a>
+</li>
+<li class="heading2" id="i11.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.5" href="sgfm_getcurrentfont.html" target="hmcontent"><span class="heading2" id="s11.5">GetCurrentFont</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i12" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a12" href="sgctext.html" target="hmcontent"><span class="heading1" id="s12" ondblclick="return dblclicked(this)">sgCText</span></a>
+<ul id="ul12" style="list-style-type:none">
+<li class="heading2" id="i12.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.1" href="sgctext_create.html" target="hmcontent"><span class="heading2" id="s12.1">Create</span></a>
+</li>
+<li class="heading2" id="i12.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.2" href="sgctext_draw.html" target="hmcontent"><span class="heading2" id="s12.2">Draw</span></a>
+</li>
+<li class="heading2" id="i12.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.3" href="sgctext_getlines.html" target="hmcontent"><span class="heading2" id="s12.3">GetLines</span></a>
+</li>
+<li class="heading2" id="i12.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.4" href="sgctext_getlinescount.html" target="hmcontent"><span class="heading2" id="s12.4">GetLinesCount</span></a>
+</li>
+<li class="heading2" id="i12.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.5" href="sgctext_getstyle.html" target="hmcontent"><span class="heading2" id="s12.5">GetStyle</span></a>
+</li>
+<li class="heading2" id="i12.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.6" href="sgctext_gettext.html" target="hmcontent"><span class="heading2" id="s12.6">GetText</span></a>
+</li>
+<li class="heading2" id="i12.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.7" href="sgctext_getfont.html" target="hmcontent"><span class="heading2" id="s12.7">GetFont</span></a>
+</li>
+<li class="heading2" id="i12.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.8" href="sgctext_getworldmatrix.html" target="hmcontent"><span class="heading2" id="s12.8">GetWorldMatrix</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i13" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a13" href="sgcdimensions.html" target="hmcontent"><span class="heading1" id="s13" ondblclick="return dblclicked(this)">sgCDimensions</span></a>
+<ul id="ul13" style="list-style-type:none">
+<li class="heading2" id="i13.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.1" href="sgcdim_create.html" target="hmcontent"><span class="heading2" id="s13.1">Create</span></a>
+</li>
+<li class="heading2" id="i13.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.2" href="sgcdim_draw.html" target="hmcontent"><span class="heading2" id="s13.2">Draw</span></a>
+</li>
+<li class="heading2" id="i13.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.3" href="sgcdim_getlines.html" target="hmcontent"><span class="heading2" id="s13.3">GetLines</span></a>
+</li>
+<li class="heading2" id="i13.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.4" href="sgcdim_getlinescount.html" target="hmcontent"><span class="heading2" id="s13.4">GetLinesCount</span></a>
+</li>
+<li class="heading2" id="i13.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.5" href="sgcdim_getformedpoints.html" target="hmcontent"><span class="heading2" id="s13.5">GetFormedPoints</span></a>
+</li>
+<li class="heading2" id="i13.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.6" href="sgcdim_gettype.html" target="hmcontent"><span class="heading2" id="s13.6">GetType</span></a>
+</li>
+<li class="heading2" id="i13.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.7" href="sgcdim_getstyle.html" target="hmcontent"><span class="heading2" id="s13.7">GetStyle</span></a>
+</li>
+<li class="heading2" id="i13.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.8" href="sgcdim_gettext.html" target="hmcontent"><span class="heading2" id="s13.8">GetText</span></a>
+</li>
+<li class="heading2" id="i13.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.9" href="sgcdim_getfont.html" target="hmcontent"><span class="heading2" id="s13.9">GetFont</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i14" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a14" href="sgfilemanager.html" target="hmcontent"><span class="heading1" id="s14" ondblclick="return dblclicked(this)">sgFileManager</span></a>
+<ul id="ul14" style="list-style-type:none">
+<li class="heading2" id="i14.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.1" href="sgfileman_save.html" target="hmcontent"><span class="heading2" id="s14.1">Save</span></a>
+</li>
+<li class="heading2" id="i14.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.2" href="sgfileman_getfileheader.html" target="hmcontent"><span class="heading2" id="s14.2">GetFileHeader</span></a>
+</li>
+<li class="heading2" id="i14.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.3" href="sgfileman_getuserdata.html" target="hmcontent"><span class="heading2" id="s14.3">GetUserData</span></a>
+</li>
+<li class="heading2" id="i14.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.4" href="sgfileman_open.html" target="hmcontent"><span class="heading2" id="s14.4">Open</span></a>
+</li>
+<li class="heading2" id="i14.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.5" href="sgfileman_exportdxf.html" target="hmcontent"><span class="heading2" id="s14.5">ExportDXF</span></a>
+</li>
+<li class="heading2" id="i14.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.6" href="sgfileman_importdxf.html" target="hmcontent"><span class="heading2" id="s14.6">ImportDXF</span></a>
+</li>
+<li class="heading2" id="i14.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.7" href="sgfileman_exportstl.html" target="hmcontent"><span class="heading2" id="s14.7">ExportSTL</span></a>
+</li>
+<li class="heading2" id="i14.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.8" href="sgfileman_importstl.html" target="hmcontent"><span class="heading2" id="s14.8">ImportSTL</span></a>
+</li>
+<li class="heading2" id="i14.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.9" href="sgfileman_objecttobitarray.html" target="hmcontent"><span class="heading2" id="s14.9">ObjectToBitArray</span></a>
+</li>
+<li class="heading2" id="i14.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.10" href="sgfileman_bitarraytoobject.html" target="hmcontent"><span class="heading2" id="s14.10">BitArrayToObject</span></a>
+</li>
+<li class="heading2" id="i14.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.11" href="sgfileman_objectfromtriangles.html" target="hmcontent"><span class="heading2" id="s14.11">ObjectFromTriangles</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i15" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a15" href="mem_manager.html" target="hmcontent"><span class="heading1" id="s15">Memory manager</span></a>
+</li>
+<li class="heading1" id="i16" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a16" href="ex.html" target="hmcontent"><span class="heading1" id="s16" ondblclick="return dblclicked(this)">Examples</span></a>
+<ul id="ul16" style="list-style-type:none">
+<li class="heading2" id="i16.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.1" href="examp_primit.html" target="hmcontent"><span class="heading2" id="s16.1" ondblclick="return dblclicked(this)">Primitives</span></a>
+<ul id="ul16.1" style="list-style-type:none">
+<li class="heading3" id="i16.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.1" href="ex_pr_points.html" target="hmcontent"><span class="heading3" id="s16.1.1">Points</span></a>
+</li>
+<li class="heading3" id="i16.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.2" href="ex_pr_lines.html" target="hmcontent"><span class="heading3" id="s16.1.2">Line segments</span></a>
+</li>
+<li class="heading3" id="i16.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.3" href="ex_pr_cir.html" target="hmcontent"><span class="heading3" id="s16.1.3">Circles</span></a>
+</li>
+<li class="heading3" id="i16.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.4" href="ex_pr_arc.html" target="hmcontent"><span class="heading3" id="s16.1.4">Arcs</span></a>
+</li>
+<li class="heading3" id="i16.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.5" href="ex_pr_spl.html" target="hmcontent"><span class="heading3" id="s16.1.5">Splines</span></a>
+</li>
+<li class="heading3" id="i16.1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.6" href="ex_pr_cont.html" target="hmcontent"><span class="heading3" id="s16.1.6">Contours</span></a>
+</li>
+<li class="heading3" id="i16.1.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.7" href="ex_pr_equid.html" target="hmcontent"><span class="heading3" id="s16.1.7">Equidistant lines</span></a>
+</li>
+<li class="heading3" id="i16.1.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.8" href="ex_pr_boxes.html" target="hmcontent"><span class="heading3" id="s16.1.8">Boxes</span></a>
+</li>
+<li class="heading3" id="i16.1.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.9" href="ex_pr_sph.html" target="hmcontent"><span class="heading3" id="s16.1.9">Spheres</span></a>
+</li>
+<li class="heading3" id="i16.1.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.10" href="ex_pr_cyl.html" target="hmcontent"><span class="heading3" id="s16.1.10">Cylinders</span></a>
+</li>
+<li class="heading3" id="i16.1.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.11" href="ex_pr_cones.html" target="hmcontent"><span class="heading3" id="s16.1.11">Cones</span></a>
+</li>
+<li class="heading3" id="i16.1.12" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.12" href="ex_pr_tors.html" target="hmcontent"><span class="heading3" id="s16.1.12">Toruses</span></a>
+</li>
+<li class="heading3" id="i16.1.13" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.13" href="ex_pr_ell.html" target="hmcontent"><span class="heading3" id="s16.1.13">Ellipsoids</span></a>
+</li>
+<li class="heading3" id="i16.1.14" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.1.14" href="ex_pr_spb.html" target="hmcontent"><span class="heading3" id="s16.1.14">Spherical bands</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i16.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.2" href="examp_bool.html" target="hmcontent"><span class="heading2" id="s16.2" ondblclick="return dblclicked(this)">Boolean operations</span></a>
+<ul id="ul16.2" style="list-style-type:none">
+<li class="heading3" id="i16.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.2.1" href="ex_bool_inters.html" target="hmcontent"><span class="heading3" id="s16.2.1">Intersection</span></a>
+</li>
+<li class="heading3" id="i16.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.2.2" href="ex_bool_un.html" target="hmcontent"><span class="heading3" id="s16.2.2">Union</span></a>
+</li>
+<li class="heading3" id="i16.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.2.3" href="ex_bool_sub.html" target="hmcontent"><span class="heading3" id="s16.2.3">Subtraction</span></a>
+</li>
+<li class="heading3" id="i16.2.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.2.4" href="ex_bool_int_cont.html" target="hmcontent"><span class="heading3" id="s16.2.4">Intersections contours</span></a>
+</li>
+<li class="heading3" id="i16.2.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.2.5" href="ex_bool_plane_sec.html" target="hmcontent"><span class="heading3" id="s16.2.5">Clips by plane</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i16.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.3" href="examp_kin.html" target="hmcontent"><span class="heading2" id="s16.3" ondblclick="return dblclicked(this)">Kinematic</span></a>
+<ul id="ul16.3" style="list-style-type:none">
+<li class="heading3" id="i16.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.3.1" href="ex_kin_rots.html" target="hmcontent"><span class="heading3" id="s16.3.1">Surfaces of revolution</span></a>
+</li>
+<li class="heading3" id="i16.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.3.2" href="ex_kin_rotb.html" target="hmcontent"><span class="heading3" id="s16.3.2">Solids of revolution</span></a>
+</li>
+<li class="heading3" id="i16.3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.3.3" href="ex_kin_exts.html" target="hmcontent"><span class="heading3" id="s16.3.3">Surfaces of extrusion</span></a>
+</li>
+<li class="heading3" id="i16.3.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.3.4" href="ex_kin_extrb.html" target="hmcontent"><span class="heading3" id="s16.3.4">Solids of extrusion</span></a>
+</li>
+<li class="heading3" id="i16.3.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.3.5" href="ex_kin_spirs.html" target="hmcontent"><span class="heading3" id="s16.3.5">Spiral surfaces</span></a>
+</li>
+<li class="heading3" id="i16.3.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.3.6" href="ex_kin_spirb.html" target="hmcontent"><span class="heading3" id="s16.3.6">Spiral solids</span></a>
+</li>
+<li class="heading3" id="i16.3.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.3.7" href="ex_kin_pipes.html" target="hmcontent"><span class="heading3" id="s16.3.7">Pipe-like surfaces</span></a>
+</li>
+<li class="heading3" id="i16.3.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.3.8" href="ex_kin_pipeb.html" target="hmcontent"><span class="heading3" id="s16.3.8">Pipe-like solids</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i16.4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.4" href="examp_surf.html" target="hmcontent"><span class="heading2" id="s16.4" ondblclick="return dblclicked(this)">Surfaces</span></a>
+<ul id="ul16.4" style="list-style-type:none">
+<li class="heading3" id="i16.4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.4.1" href="ex_surf_mesh.html" target="hmcontent"><span class="heading3" id="s16.4.1">Mesh</span></a>
+</li>
+<li class="heading3" id="i16.4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.4.2" href="ex_surf_face.html" target="hmcontent"><span class="heading3" id="s16.4.2">Flat face with holes</span></a>
+</li>
+<li class="heading3" id="i16.4.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.4.3" href="ex_surf_coons_3.html" target="hmcontent"><span class="heading3" id="s16.4.3">Coons surface by three boundary contours</span></a>
+</li>
+<li class="heading3" id="i16.4.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.4.4" href="ex_surf_coons_4.html" target="hmcontent"><span class="heading3" id="s16.4.4">Coons surface by four boundary contours</span></a>
+</li>
+<li class="heading3" id="i16.4.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.4.5" href="ex_surf_lin_surf.html" target="hmcontent"><span class="heading3" id="s16.4.5">Ruled surface from clips</span></a>
+</li>
+<li class="heading3" id="i16.4.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.4.6" href="ex_surf_spl_sur.html" target="hmcontent"><span class="heading3" id="s16.4.6">Spline surface from clips</span></a>
+</li>
+<li class="heading3" id="i16.4.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.4.7" href="ex_surf_spl_b.html" target="hmcontent"><span class="heading3" id="s16.4.7">Spline solid from clips</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i16.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.5" href="exampl_scenes.html" target="hmcontent"><span class="heading2" id="s16.5" ondblclick="return dblclicked(this)">Composite scenes</span></a>
+<ul id="ul16.5" style="list-style-type:none">
+<li class="heading3" id="i16.5.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.5.1" href="ex_cs_room.html" target="hmcontent"><span class="heading3" id="s16.5.1">Room</span></a>
+</li>
+<li class="heading3" id="i16.5.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.5.2" href="ex_cs_drills.html" target="hmcontent"><span class="heading3" id="s16.5.2">Drills</span></a>
+</li>
+<li class="heading3" id="i16.5.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.5.3" href="ex_cs_clock.html" target="hmcontent"><span class="heading3" id="s16.5.3">Clock</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons('cicon9.gif','cicon2.gif','cicon1.gif');</script>
+</body>
+</html>

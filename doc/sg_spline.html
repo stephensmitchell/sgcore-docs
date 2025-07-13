@@ -1,0 +1,261 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Geometries &gt; SG_SPLINE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sg_spline.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="geometries.html">Geometries</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"><span style="font-size: 14pt; color: #00007f;">SG_SPLINE class</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Heading1" style="font-weight: normal;">The SG_SPLINE structure is a presentation of the Bezier spline in the three-dimensional space.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt;">Has the following fields</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">SG_POINT* &nbsp; &nbsp;m_points; &nbsp; - &nbsp;array of spline points approximated by line segments</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">int &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m_points_count; - number of approximation points</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">SG_POINT* &nbsp; &nbsp;m_knots; &nbsp; - &nbsp; array of spline knots</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">int &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m_knots_count; - number of spline knots</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt;">Has the following methods:</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> <a id="crespl"></a></span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">static</span><span style="font-size: 12pt; font-weight: bold;"> &nbsp; SG_SPLINE* &nbsp;  </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">Create</span><span style="font-size: 12pt; font-weight: bold;">();</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">The virtual class constructor. The SG_SPLINE::SG_SPLINE() constructor is closed, so that memory allocation for a spline and its deletion can take place with the means of the sgCore library. That's why you can create a spline only using the Create() static function. You must delete the spline after using it by calling the <a href="sg_spline.html#delspline" class="topiclink">Delete(SG_SPLINE*)</a> static function.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">No arguments.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">Returns the pointer to an empty spline which you must fill using the following functions </span><span style="font-size: 12pt;"><a href="sg_spline.html#addspl" class="topiclink">AddKnot()</a></span><span class="f_Heading1" style="font-weight: normal;">, </span><span style="font-size: 12pt;"><a href="sg_spline.html#delspl" class="topiclink">DeleteKnot()</a></span><span class="f_Heading1" style="font-weight: normal;">, </span><span style="font-size: 12pt;"><a href="sg_spline.html#movspl" class="topiclink">MoveKnot()</a></span><span class="f_Heading1" style="font-weight: normal;">.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> <a id="delspline"></a></span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">static</span><span style="font-size: 12pt; font-weight: bold;"> &nbsp; void &nbsp;  </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">Delete</span><span style="font-size: 12pt; font-weight: bold;">(SG_SPLINE* spl);</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">Deletes the spline previously created using the </span><span style="font-size: 12pt;"><a href="sg_spline.html#crespl" class="topiclink">Create()</a></span> <span class="f_Heading1" style="font-weight: normal;">function.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">spl</span><span style="font-size: 12pt;"> - a spline to be deleted</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">No value</span><span class="f_Heading1" style="font-weight: normal;">s</span><span style="font-size: 12pt;">.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> <a id="addspl"></a></span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">bool </span><span style="font-size: 12pt; font-weight: bold;"> &nbsp; </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">AddKnot</span><span style="font-size: 12pt; font-weight: bold;">(const SG_POINT&amp; pnt, int nmbr);</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">Adds a knot to the spline</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">pnt</span><span style="font-size: 12pt;"> - a new knot</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">nmbr</span><span style="font-size: 12pt;"> - knot number.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">If the knot is successfully added </span><span style="font-size: 12pt;">the function returns </span><span style="font-size: 12pt; color: #00007f;">true</span><span style="font-size: 12pt;">, otherwise </span><span style="font-size: 12pt; color: #00007f;">false</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> <a id="movspl"></a></span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">bool </span><span style="font-size: 12pt; font-weight: bold;"> &nbsp; </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">MoveKnot</span><span style="font-size: 12pt; font-weight: bold;">(int nmbr, const SG_POINT&amp; pnt);</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">Moves a knot in the spline</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">pnt</span><span style="font-size: 12pt;"> - new knot location</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">nmbr</span><span style="font-size: 12pt;"> - knot number.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">If the knot is successfully moved </span><span style="font-size: 12pt;">the function returns </span><span style="font-size: 12pt; color: #00007f;">true</span><span style="font-size: 12pt;">, otherwise </span><span style="font-size: 12pt; color: #00007f;">false</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> <a id="delspl"></a></span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">bool </span><span style="font-size: 12pt; font-weight: bold;"> &nbsp; </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">DeleteKnot</span><span style="font-size: 12pt; font-weight: bold;">(int nmbr);</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">Deletes a knot from the spline</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">nmbr</span><span style="font-size: 12pt;"> - knot number.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">If the knot is successfully removed </span><span style="font-size: 12pt;">the function returns </span><span style="font-size: 12pt; color: #00007f;">true</span><span style="font-size: 12pt;">, otherwise </span><span style="font-size: 12pt; color: #00007f;">false</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">bool </span><span style="font-size: 12pt; font-weight: bold;"> &nbsp; </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">IsClosed</span><span style="font-size: 12pt; font-weight: bold;">();</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">Checks whether the spline is closed</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">No arguments.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">If the spline is closed the function returns</span><span style="font-size: 12pt;"> </span><span style="font-size: 12pt; color: #00007f;">true</span><span style="font-size: 12pt;">, otherwise </span><span style="font-size: 12pt; color: #00007f;">false</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">bool </span><span style="font-size: 12pt; font-weight: bold;"> &nbsp; </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">Close</span><span style="font-size: 12pt; font-weight: bold;">();</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">Closes the spline.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">No arguments.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">If the spline has been successfully closed the function returns </span><span style="font-size: 12pt; color: #00007f;">true</span><span style="font-size: 12pt;">, otherwise </span><span style="font-size: 12pt; color: #00007f;">false</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">bool </span><span style="font-size: 12pt; font-weight: bold;">  </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;"> UnClose</span><span style="font-size: 12pt; font-weight: bold;">(int nmbr);</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">Uncloses the closed spline by a specified knot.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt; color: #00007f;">nmbr</span><span style="font-size: 12pt;"> - number of the knot to unclose the spline by.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">If the spline has been successfully unclosed </span><span style="font-size: 12pt;">the function returns </span><span style="font-size: 12pt; color: #00007f;">true</span><span style="font-size: 12pt;">, otherwise </span><span style="font-size: 12pt; color: #00007f;">false</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">const &nbsp; SG_POINT* </span><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">GetPoints</span><span style="font-size: 12pt; font-weight: bold;">() </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">const</span><span style="font-size: 12pt; font-weight: bold;">;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">Returns the pointer to the array of the spline appoximation points.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">No arguments.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">The function Returns the pointer to the array of the spline appoximation points.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">int </span><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">GetPointsCount</span><span style="font-size: 12pt; font-weight: bold;">() </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">const</span><span style="font-size: 12pt; font-weight: bold;">;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">Returns a number of the spline approximation points.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">No arguments.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">The function returns a number of the spline approximation points.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">const &nbsp; SG_POINT* </span><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">GetKnots</span><span style="font-size: 12pt; font-weight: bold;">() </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">const</span><span style="font-size: 12pt; font-weight: bold;">;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">Returns the pointer to the array of the spline </span><span class="f_Heading1" style="font-weight: normal;">knots</span><span style="font-size: 12pt;">.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">No arguments.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">The function Returns the pointer</span><span style="font-size: 12pt;"> to the array of the spline </span><span class="f_Heading1" style="font-weight: normal;">knots</span><span style="font-size: 12pt;">.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">const &nbsp; SG_POINT* </span><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold; color: #7f0000;">GetKnotsCount</span><span style="font-size: 12pt; font-weight: bold;">() </span><span style="font-size: 12pt; font-weight: bold; color: #00007f;">const</span><span style="font-size: 12pt; font-weight: bold;">;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">Returns the number of spline knots.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="font-size: 12pt;">No arguments.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span class="f_Heading1" style="font-weight: normal;">The function returns the number of spline knots.</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 78px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt;">Defined in </span><span class="f_Heading1" style="font-weight: normal;">sg2D.h</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="sg_point.html" class="topiclink">SG_POINT</a><span style="color: #00007f;">  <a href="ex_pr_spl.html" class="topiclink">Example</a></span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,490 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Examples</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "ex.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"> <span style="font-size: 14pt;"> </span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 14pt; color: #00007f;">Examples of working with the sgCore library.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Heading1" style="font-weight: normal;">In this section the examples realized in the demo application (Demo.exe) are analyzed.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Heading1" style="font-weight: normal;">Here you can find only objects creation methods. One of the examples of drawing objects is given in the source code of the Demo.exe application (the Painter class).</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Heading1" style="font-weight: normal;">Clicking an image of the necessary example you will open the detailed description how to create it </span><span style="font-size: 12pt;">(</span><span class="f_Heading1" style="font-weight: normal;">C</span><span style="font-size: 12pt;">++ program):</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Heading1" style="font-weight: normal;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table style="background-color:#ffffff; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 138px;"><a href="ex_pr_points.html" class="topiclink"><img src="points.png" width="259" height="138" alt="points" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Points</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 144px;"><span style="font-size: 12pt;">  </span><a href="ex_pr_lines.html" class="topiclink"><img src="lines.png" width="245" height="140" alt="lines" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Line segments</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 150px;"><a href="ex_pr_cir.html" class="topiclink"><img src="circles.png" width="249" height="142" alt="circles" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Circles</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 150px;"><a href="ex_pr_arc.html" class="topiclink"><img src="arcs.png" width="252" height="125" alt="arcs" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Arcs</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 132px;"><a href="ex_pr_spl.html" class="topiclink"><img src="splines.png" width="303" height="185" alt="splines" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Splines</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 138px;"><a href="ex_pr_cont.html" class="topiclink"><img src="contours.png" width="299" height="184" alt="contours" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Contours</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 72px;"><a href="ex_pr_equid.html" class="topiclink"><img src="equidi.png" width="372" height="122" alt="equidi" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Equidistant line</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 174px;"><a href="ex_pr_boxes.html" class="topiclink"><img src="boxes.png" width="156" height="151" alt="boxes" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Boxes</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 108px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><a href="ex_pr_sph.html" class="topiclink"><img src="spheres.png" width="287" height="113" alt="spheres" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Spheres</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt;"> </span><a href="ex_pr_cyl.html" class="topiclink"><img src="cyls.png" width="255" height="141" alt="cyls" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Cylinder</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 156px;"><span style="font-size: 12pt;"> </span><a href="ex_pr_cones.html" class="topiclink"><img src="cones.png" width="165" height="156" alt="cones" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Cones</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 132px;"><a href="ex_pr_tors.html" class="topiclink"><img src="tors.png" width="248" height="84" alt="tors" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Toruses</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 138px;"><a href="ex_pr_ell.html" class="topiclink"><img src="ells.png" width="256" height="109" alt="ells" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Ellipsoids</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 138px;"><a href="ex_pr_spb.html" class="topiclink"><img src="spb.png" width="302" height="131" alt="spB" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Spherical band</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 126px;"><a href="ex_bool_inters.html" class="topiclink"><img src="bool_inters.png" width="336" height="166" alt="bool_inters" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Boolean intersection</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 12px;"><a href="ex_bool_un.html" class="topiclink"><img src="bool_un.png" width="471" height="210" alt="bool_un" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Boolean uniting</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 12px;"><a href="ex_bool_sub.html" class="topiclink"><img src="bool_sub.png" width="478" height="188" alt="bool_sub" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Boolean subtraction</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 24px;"><a href="ex_bool_int_cont.html" class="topiclink"><img src="bool_in_con.png" width="466" height="204" alt="bool_in_con" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Intersection contours</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 30px;"><a href="ex_bool_plane_sec.html" class="topiclink"><img src="bool_pl_sec.png" width="458" height="177" alt="bool_pl_sec" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Clips by planes</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 120px;"><span style="font-size: 12pt;"> </span><a href="ex_kin_rots.html" class="topiclink"><img src="kin_ros.png" width="289" height="252" alt="kin_roS" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Revolved surface</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 126px;"><a href="ex_kin_rotb.html" class="topiclink"><img src="kin_rob.png" width="327" height="258" alt="kin_roB" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Revolved solids</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 36px;"><a href="ex_kin_exts.html" class="topiclink"><img src="kin_ex_s.png" width="460" height="118" alt="kin_ex_s" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Surfaces of extrusion</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 72px;"><a href="ex_kin_extrb.html" class="topiclink"><img src="kin_ex_b.png" width="380" height="229" alt="kin_ex_b" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Solids of extrusion</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 60px;"><a href="ex_kin_spirs.html" class="topiclink"><img src="kin_sp_s.png" width="390" height="177" alt="kin_sp_s" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Spiral surfaces</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 60px;"><a href="ex_kin_spirb.html" class="topiclink"><img src="kin_sp_b.png" width="412" height="145" alt="kin_sp_b" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Spiral solids</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 60px;"><a href="ex_kin_pipes.html" class="topiclink"><img src="kin_pip_s.png" width="398" height="181" alt="kin_pip_s" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Pipe-like surfaces</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 66px;"><a href="ex_kin_pipeb.html" class="topiclink"><img src="kin_pip_b.png" width="350" height="182" alt="kin_pip_b" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Pipe-like solids</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 72px;"><a href="ex_surf_mesh.html" class="topiclink"><img src="mesh.png" width="320" height="204" alt="mesh" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Meshes</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p><a href="ex_surf_face.html" class="topiclink"><img src="face.png" width="495" height="199" alt="face" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Flat faces with holes</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 24px;"><a href="ex_surf_coons_3.html" class="topiclink"><img src="coons3.png" width="439" height="273" alt="coons3" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Coons surfaces by three boundary contours</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p><a href="ex_surf_coons_4.html" class="topiclink"><img src="coons4.png" width="556" height="241" alt="coons4" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Coons surfaces by four boundary contours</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 6px;"><a href="ex_surf_lin_surf.html" class="topiclink"><img src="linears.png" width="517" height="275" alt="linearS" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Ruled surfaces by two clips</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p><a href="ex_surf_spl_sur.html" class="topiclink"><img src="splin_sur.png" width="514" height="274" alt="splin_sur" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Spline surfaces by clips</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p><a href="ex_surf_spl_b.html" class="topiclink"><img src="splin_bod.png" width="596" height="269" alt="splin_bod" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Spline solids by clips</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 24px;"><a href="ex_cs_room.html" class="topiclink"><img src="room.png" width="437" height="322" alt="room" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Room</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p style="margin: 0px 0px 0px 18px;"><a href="ex_cs_drills.html" class="topiclink"><img src="drills.png" width="469" height="270" alt="drills" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Drills</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:579px; padding:0px; border:solid 1px #000000;"><p><a href="ex_cs_clock.html" class="topiclink"><img src="clock.png" width="520" height="289" alt="clock" style="border:none" /></a></p>
+</td>
+<td style="vertical-align:top; width:240px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Clock</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Examples &gt; Primitives &gt; Arcs</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "ex_pr_arc.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="ex.html">Examples</a> &gt; <a href="examp_primit.html">Primitives</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"><span style="font-size: 14pt; color: #00007f;">Arcs.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">Let's create an array of the arcs with centers lying on a circle.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">Let the variation interval of the angle moving along the circle be from 0 to Pi.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">Let the variation angle step be equal to 0.8 radians. </span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">We'll draw arcs from three points - two end points and the one lying on the arc.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">The end points will lie on a circle with the Z center coordinate equal to 0 and radius equal to 5, and the arc middle point will lie on a circle with the Z center coordinate equal to 3 and radius equal to 7.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">Let's</span><span style="font-size: 12pt;"> calculate the color, thickness and styles of the </span><span class="f_Heading1" style="font-weight: normal;">arcs</span><span style="font-size: 12pt;"> o</span><span class="f_Heading1" style="font-weight: normal;">n</span><span style="font-size: 12pt;"> the following formulas:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; font-style: italic;">arc color number from palette = &nbsp;residue of division </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">integer part (10*angle) </span><span style="font-size: 12pt; font-style: italic;">by </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">200+50;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; font-style: italic;">arc thickness = residue of division </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">integer part (10*angle) </span><span style="font-size: 12pt; font-style: italic;">by </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">5;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; font-style: italic;">arc style number = &nbsp;residue of division </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">integer part (10*angle) </span><span style="font-size: 12pt; font-style: italic;">by </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">5;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">So, the function of creating the necessary line segments array will look like this:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';">  </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">for</span><span style="font-size: 8pt; font-family: 'Courier New';"> (</span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">double</span><span style="font-size: 8pt; font-family: 'Courier New';"> i=</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">;i&lt;</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2.0</span><span style="font-size: 8pt; font-family: 'Courier New';">*</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.14159265</span><span style="font-size: 8pt; font-family: 'Courier New';">;i+=</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.8</span><span style="font-size: 8pt; font-family: 'Courier New';">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;{</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp;SG_POINT &nbsp; arP1 = {</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5.0</span><span style="font-size: 8pt; font-family: 'Courier New';">*cos(i),</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5.0</span><span style="font-size: 8pt; font-family: 'Courier New';">*sin(i),</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">};</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp;SG_POINT &nbsp; arP2 = {</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5.0</span><span style="font-size: 8pt; font-family: 'Courier New';">*cos(i+</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.4</span><span style="font-size: 8pt; font-family: 'Courier New';">),</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5.0</span><span style="font-size: 8pt; font-family: 'Courier New';">*sin(i+</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.4</span><span style="font-size: 8pt; font-family: 'Courier New';">),</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">};</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp;SG_POINT &nbsp; arP3 = {</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">7.0</span><span style="font-size: 8pt; font-family: 'Courier New';">*cos(i+</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.2</span><span style="font-size: 8pt; font-family: 'Courier New';">),</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">7.0</span><span style="font-size: 8pt; font-family: 'Courier New';">*sin(i+</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.2</span><span style="font-size: 8pt; font-family: 'Courier New';">),</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">};</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp;SG_ARC &nbsp; &nbsp; arGeo;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;  </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 8pt; font-family: 'Courier New';"> (arGeo.FromTreePoints(arP1, arP2, arP3,</span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">false</span><span style="font-size: 8pt; font-family: 'Courier New';">))</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp;{</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;sgCArc* ar = sgCreateArc(arGeo);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp;  </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 8pt; font-family: 'Courier New';"> (ar)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;{</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;sgGetScene()-&gt;AttachObject(ar);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;ar-&gt;SetAttribute(SG_OA_COLOR,((</span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">int</span><span style="font-size: 8pt; font-family: 'Courier New';">)(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">10</span><span style="font-size: 8pt; font-family: 'Courier New';">*i))%</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">200</span><span style="font-size: 8pt; font-family: 'Courier New';">+</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">50</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;ar-&gt;SetAttribute(SG_OA_LINE_THICKNESS, ((</span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">int</span><span style="font-size: 8pt; font-family: 'Courier New';">)(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">10</span><span style="font-size: 8pt; font-family: 'Courier New';">*i))%</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;ar-&gt;SetAttribute(SG_OA_LINE_TYPE, ((</span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">int</span><span style="font-size: 8pt; font-family: 'Courier New';">)(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">10</span><span style="font-size: 8pt; font-family: 'Courier New';">*i))%</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp;} </span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;}</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="sgcarc.html" class="topiclink">sgCArc</a> &nbsp;  <a href="sgcarc_create.html" class="topiclink">sgCArc::Create</a>  <a href="sg_arc.html" class="topiclink">SG_ARC</a>  <a href="sgcscene_getscene.html" class="topiclink">sgGetScene</a>  <a href="sgcscene_attachobject.html" class="topiclink">sgCScene::AttachObject</a> &nbsp; <a href="sgcobject_setattribute.html" class="topiclink">sgCObject::SetAttribute</a></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 14pt; color: #00007f;">Illustration:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><img src="arcs.png" width="252" height="125" alt="arcs" style="border:none" /></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

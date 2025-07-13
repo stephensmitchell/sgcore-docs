@@ -1,0 +1,402 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>sgCDimensions &gt; Create</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sgcdim_create.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="sgcdimensions.html">sgCDimensions</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"> <span style="font-size: 14pt;"> </span><span style="font-size: 14pt; color: #00007f;">static &nbsp; sgCDimensions* &nbsp; sgCDimensions::Create(SG_DIMENSION_TYPE dimType, const SG_POINT* formed_points, const sgCFont* fnt, const SG_DIMENSION_STYLE&amp; stl,const char* string)</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Creates an object of the DIMENSIONS class of the specified type and with the specified font and style.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">dimType</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">type of a dimensional object. </span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt;">Can take the following values:</span></p>
+<p style="text-align: left; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 72px;"><span style="font-size:12pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-size: 12pt; color: #00007f;">SG_DT_LINEAR -</span><span style="font-size: 12pt;"> linear dimension</span></p><p style="text-align: left; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 72px;"><span style="font-size:12pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-size: 12pt; color: #00007f;">SG_DT_ANGLE</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">angle dimension</span></p><p style="text-align: left; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 72px;"><span style="font-size:12pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-size: 12pt; color: #00007f;">SG_DT_RAD</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">radial dimension</span></p><p style="text-align: left; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 72px;"><span style="font-size:12pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-size: 12pt; color: #00007f;">SG_DT_DIAM </span><span class="f_Heading1" style="font-weight: normal;">- </span><span style="font-size: 12pt;">diametral dimension</span></p><p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">formed_points</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">array of the distinguished point the dimension is built on.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt;">These points has the following meanings for various dimensions types:</span></p>
+<p><span style="font-size: 12pt;">The dimension itself is calculated as the distance between the first and the second points.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 4px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:84px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt; font-weight: bold;">Dimension type</span></p>
+</td>
+<td style="vertical-align:top; width:323px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt; font-weight: bold;">Distinguished points</span></p>
+</td>
+<td style="vertical-align:top; width:351px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt; font-weight: bold;">Explanation</span></p>
+</td>
+<td style="vertical-align:top; width:90px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt; font-weight: bold; color: #ff0000;">Necessary number</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:84px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Distant</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">(linear)</span></p>
+</td>
+<td style="vertical-align:top; width:323px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_pnts_lin_zoom56.jpg" width="309" height="132" alt="dim_pnts_lin" style="border:none" /></p>
+</td>
+<td style="vertical-align:top; width:351px; padding:0px; border:solid 1px #000000;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">1.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The first point is where the start dimension point is. </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">2.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The second point is where the end dimension point is.</span></td></tr></table></div><p><span style="font-size: 12pt;">The dimension itself is calculated as the distance between the first and the second points.</span></p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">3. &nbsp; The third point is an arbitrary point on the dimensional line.</span></p>
+</td>
+<td style="vertical-align:top; width:90px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt; color: #ff0000;">3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:84px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Angle</span></p>
+</td>
+<td style="vertical-align:top; width:323px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><img src="dim_pnts_ang_zoom87.jpg" width="322" height="191" alt="dim_pnts_ang" style="border:none" /></p>
+</td>
+<td style="vertical-align:top; width:351px; padding:0px; border:solid 1px #000000;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">1.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The first point is the first one lying on the first side of the measured angle.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">2.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The second point is the second one lying on the first side of the measured angle.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">3.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The third point is the first one lying on the second side of the measured angle.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">4.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The forth point is the second one lying on the second side of the measured angle.</span></td></tr></table></div><p><span style="font-size: 12pt;">The dimension itself is calculated as the angle between two these line segments.</span></p>
+<p>&nbsp;</p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">5. &nbsp; The fifth point is an arbitrary point on the dimensional line.</span></p>
+</td>
+<td style="vertical-align:top; width:90px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt; color: #ff0000;">5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:84px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Radial</span></p>
+</td>
+<td style="vertical-align:top; width:323px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_pnts_rad_zoom88.jpg" width="268" height="214" alt="dim_pnts_rad" style="border:none" /></p>
+</td>
+<td style="vertical-align:top; width:351px; padding:0px; border:solid 1px #000000;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">1.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The first point is the center of the measured object.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">2.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The second point is a point on the object.</span></td></tr></table></div><p><span style="font-size: 12pt;">The dimension itself is calculated as the distance between the first and the second points.</span></p>
+<p><span style="font-size: 12pt;">3. &nbsp; The third point is an arbitrary point on the dimensional line.</span></p>
+<p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:90px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt; color: #ff0000;">3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:84px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Diametral</span></p>
+</td>
+<td style="vertical-align:top; width:323px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_pnts_dim_zoom92.jpg" width="244" height="271" alt="dim_pnts_dim" style="border:none" /></p>
+</td>
+<td style="vertical-align:top; width:351px; padding:0px; border:solid 1px #000000;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">1.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The first point is the center of the measured object.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:27px"><span style="font-size: 12pt;">2.</span></td><td style="border:none;padding:0"><span style="font-size: 12pt;">The second point is a point on the object.</span></td></tr></table></div><p><span style="font-size: 12pt;">The dimension itself is calculated as the double distance between the first and the second points.</span></p>
+<p><span style="font-size: 12pt;">3. &nbsp; The third point is an arbitrary point on the dimensional line.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:90px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt; color: #ff0000;">3</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #ff0000;">The number of points for each object type given in the table above is a requirment for creating an object.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">fnt</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">pointer to a font (read more about fonts - <a href="sgcfont.html" class="topiclink">sgCFont</a>) to write the text</span><span class="f_Heading1" style="font-weight: normal;"> with</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">stl</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">dimension style structure.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">This structure is described in sgTD.h and has the following fields:</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">typedef struct  </span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">{</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">bool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dimension_line;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">bool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;first_side_line;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">bool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;second_side_line;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lug_size;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">bool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;automatic_arrows;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">bool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;out_first_arrow;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">unsigned char &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;first_arrow_style;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">bool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;out_second_arrow;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">unsigned char &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;second_arrow_style;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; arrows_size;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">SG_TEXT_ALIGN &nbsp; &nbsp; &nbsp;text_align;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">SG_TEXT_STYLE &nbsp; &nbsp; text_style;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">bool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;invert;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">SG_DIMENSION_BEHAVIOUR &nbsp; behaviour_type;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">unsigned short &nbsp;precision;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">} SG_DIMENSION_STYLE;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">dimension_line - </span><span style="font-size: 12pt;">sign showing that the dimensional line is present (above the text line)</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">first_side_line</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">sign showing that the </span><span class="f_Heading1" style="font-weight: normal;">first </span><span style="font-size: 12pt;">extension line is present</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">second_side_line</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">sign showing that the </span><span class="f_Heading1" style="font-weight: normal;">second </span><span style="font-size: 12pt;">extension line is present</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">lug_size</span><span class="f_Heading1" style="font-weight: normal;"> - lug size of extension lines above arrows</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">automatic_arrows</span><span class="f_Heading1" style="font-weight: normal;"> - sing of arrows position automatic calculation - inside or outside the dimension.</span><span style="font-size: 12pt;"> If this structure field value is </span><span style="font-size: 12pt; color: #00007f;">true, </span><span style="font-size: 12pt;">the arrows position is calculated automatically depending of the text length and arrows size. In this case the </span><span style="font-size: 12pt; color: #00007f;">out_first_arrow</span><span style="font-size: 12pt;"> and </span><span style="font-size: 12pt; color: #00007f;">out_second_arrow </span><span style="font-size: 12pt;">fields are ignored.</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">out_first_arrow &nbsp;- </span><span style="font-size: 12pt;">whether the first arrow is outside the dimension (if the </span><span style="font-size: 12pt; color: #00007f;">automatic_arrows </span><span style="font-size: 12pt;">field value is</span><span style="font-size: 12pt; color: #00007f;"> true</span><span style="font-size: 12pt;"> the field is ignored)</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">out_second_arrow - </span><span style="font-size: 12pt;">whether the second arrow is outside the dimension (if the </span><span style="font-size: 12pt; color: #00007f;">automatic_arrows </span><span style="font-size: 12pt;">field value is</span><span style="font-size: 12pt; color: #00007f;"> true</span><span style="font-size: 12pt;"> the field is ignored)</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">first_arrow_style</span><span class="f_Heading1" style="font-weight: normal;"> and</span><span style="font-size: 12pt;"> </span><span style="font-size: 12pt; color: #00007f;">second_arrow_style</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">arrows style. </span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt;">The following styles are supported:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt; font-weight: bold;">Field value</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt; font-weight: bold;">Arrow type</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">0</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_1.png" width="106" height="83" alt="dim_arr_1" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">1</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_2.png" width="106" height="75" alt="dim_arr_2" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">2</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_3.png" width="118" height="70" alt="dim_arr_3" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">3</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_4.png" width="112" height="76" alt="dim_arr_4" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">4</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_5.png" width="113" height="81" alt="dim_arr_5" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">5</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_6.png" width="99" height="72" alt="dim_arr_6" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">6</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_7.png" width="113" height="72" alt="dim_arr_7" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">7</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_8.png" width="110" height="64" alt="dim_arr_8" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">8</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_9.png" width="128" height="66" alt="dim_arr_9" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">9</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_10.png" width="123" height="73" alt="dim_arr_10" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">10</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_11.png" width="116" height="64" alt="dim_arr_11" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">11</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;"> &nbsp; &nbsp;  </span><img src="dim_arr_12.png" width="104" height="64" alt="dim_arr_12" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;">12</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_13.png" width="107" height="70" alt="dim_arr_13" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">13</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_14.png" width="104" height="65" alt="dim_arr_14" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">14</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="dim_arr_15.png" width="105" height="70" alt="dim_arr_15" style="border:none" /></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:186px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; text-indent: -27px; margin: 0px 0px 0px 27px;"><span style="font-size: 12pt;">15</span></p>
+</td>
+<td style="vertical-align:top; width:355px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;"> &nbsp; &nbsp;  </span><img src="dim_arr_16.png" width="104" height="64" alt="dim_arr_16" style="border:none" /></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">arrows_size </span><span style="font-size: 12pt;">- arrows size</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">text_align</span><span style="font-size: 12pt;"> - text string position type on the dimensional line. Can have the following values: </span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">SG_TA_CENTER</span><span style="font-size: 12pt;"> - center text position, </span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">SG_TA_LEFT</span><span class="f_Heading1" style="font-weight: normal;"> - left </span><span style="font-size: 12pt;">text position, </span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">SG_TA_RIGHT</span><span class="f_Heading1" style="font-weight: normal;"> - right </span><span style="font-size: 12pt;">text position.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">text_style -</span><span style="font-size: 12pt;"> text style (read more about text style structure <a href="sgctext_create.html" class="topiclink">here</a>)</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">invert - </span><span style="font-size: 12pt;">is necessary for angular dimensions (ignored in other cases). If the field value is</span><span style="font-size: 12pt; color: #00007f;"> true</span><span style="font-size: 12pt;">, the angle is added to 360 degrees</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">behaviour_type - </span><span style="font-size: 12pt;">is necessary for distant dimensions (ignored in other cases). Specifies the way of building the dimension by the third point (see the values table - </span><span style="font-size: 12pt; color: #00007f;">formed_points</span><span style="font-size: 12pt;">)</span><span class="f_Heading1" style="font-weight: normal;">. </span><span style="font-size: 12pt;">Has the following values:</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">SG_DBT_VERTICAL - </span><span class="f_Heading1" style="font-weight: normal;">dimensional line is construced with the vertical segment line projection between first two points</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">SG_DBT_HORIZONTAL</span><span style="font-size: 12pt;"> - </span><span class="f_Heading1" style="font-weight: normal;">dimensional line is construced with the horizontal segment line projection between the first two points</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">SG_DBT_PARALLEL</span><span style="font-size: 12pt;"> - dimensional line is constructed parallel to the segment line between the first </span><span class="f_Heading1" style="font-weight: normal;">two points</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">SG_DBT_SLANT</span><span style="font-size: 12pt;"> - dimensional line is constructed parallel to the segment line between the first </span><span class="f_Heading1" style="font-weight: normal;">two points and the third point is its start</span><span style="font-size: 12pt;"> (slanting dimensional line)</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">SG_DBT_OPTIMAL </span><span style="font-size: 12pt;">- optimum dimension is constructed between two points considering the third one</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">precision - </span><span style="font-size: 12pt;">dimensional string display accuracy (characters number after the point)</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">string </span><span class="f_Heading1" style="font-weight: normal;">- </span><span style="font-size: 12pt;">text string to be written on the dimensional line. Can be </span><span class="f_Heading1" style="font-weight: normal;">NULL</span><span style="font-size: 12pt;"> - in this case the dimension value is written on the dimensional line with the accuracy specified in the corresponding field of the </span><span style="font-size: 12pt; color: #00007f;">stl</span><span class="f_Heading1" style="font-weight: normal;"> structure</span><span style="font-size: 12pt;"> </span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt;">Returns the pointer to the created object. If the function fails NULL is returned.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ierarh.html" class="topiclink">Objects hierarchy</a> &nbsp; &nbsp; <a href="methods_sgcobj.html" class="topiclink">sgCObject methods</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

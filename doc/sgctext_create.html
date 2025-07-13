@@ -1,0 +1,174 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>sgCText &gt; Create</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sgctext_create.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="sgctext.html">sgCText</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"> <span style="font-size: 14pt;"> </span><span style="font-size: 14pt; color: #00007f;">static &nbsp; sgCText* &nbsp; sgCText::Create(const sgCFont* fnt, const SG_TEXT_STYLE&amp; stl,const char* string)</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt;">Creates an object of the TEXT class with the specified font and style. The text object is created in the XOY plane so that the coordinates origin coincides with the bottom left corner </span><span class="f_Heading1" style="font-weight: normal;">of the first text character.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">fnt</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">pointer to the font (read more about fonts - <a href="sgcfont.html" class="topiclink">sgCFont</a>),</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">stl</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">text style structure.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt;">This structure is described in </span><span class="f_Heading1" style="font-weight: normal;">sgTD.h and has the following fields</span><span style="font-size: 12pt;">:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">typedef struct</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">{</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">unsigned char &nbsp;state;</span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height; &nbsp; &nbsp;  </span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; proportions;  </span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; angle; &nbsp; &nbsp;  </span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; horiz_space_proportion;  </span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="width:30px">&nbsp;</span><span style="font-size: 12pt; color: #00007f;">double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; vert_space_proportion; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="font-size: 12pt; color: #00007f;">} SG_TEXT_STYLE; &nbsp; </span></p>
+<p style="margin: 0px 0px 0px 114px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">state</span><span style="font-size: 12pt;"> - text vertical status. If this field value is </span><span style="font-size: 12pt; color: #00007f;">SG_TEXT_VERTICAL </span><span style="font-size: 12pt;">the text direction is vertical, otherwise horizontal.</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">height </span><span style="font-size: 12pt;">- character height</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">proportions -</span><span style="font-size: 12pt;"> width to height ratio</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">angle -</span><span style="font-size: 12pt;"> characters slope angle (in degrees)</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">horiz_space_proportion -</span><span style="font-size: 12pt;"> horizontal character interval &nbsp;(in %)</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="font-size: 12pt; color: #00007f;">vert_space_proportion - </span><span style="font-size: 12pt;"> &nbsp;vertical character interval (in %) </span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">string </span><span class="f_Heading1" style="font-weight: normal;">- </span><span style="font-size: 12pt;">text string itself</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Returns the pointer to the created object. If the function fails NULL is returned.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Following shortening is defined:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New'; color: #008000;">#define &nbsp; &nbsp;sgCreateText &nbsp;sgCText::Create</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Explanation:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Below you can see illustrations of text objects with various parameters:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:914px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">Various fonts</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:914px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="text_fnts.png" width="690" height="80" alt="text_fnts" style="border:none" /></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:914px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">Various dimensions</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:914px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="text_sizes.png" width="583" height="133" alt="text_sizes" style="border:none" /></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:914px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">Various angles</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:914px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="text_ang.png" width="715" height="86" alt="text_ang" style="border:none" /></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:914px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">Various ratio</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:914px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="text_props.png" width="715" height="93" alt="text_props" style="border:none" /></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="ierarh.html" class="topiclink">Objects hierarchy</a> &nbsp; &nbsp; <a href="methods_sgcobj.html" class="topiclink">sgCObject methods</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

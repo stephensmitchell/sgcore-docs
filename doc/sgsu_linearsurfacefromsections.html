@@ -1,0 +1,140 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Algorithms &gt; sgSurfaces &gt; LinearSurfaceFromSections</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sgsu_linearsurfacefromsections.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="algs.html">Algorithms</a> &gt; <a href="sgsurfaces.html">sgSurfaces</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"> <span style="font-size: 14pt;"> </span><span style="font-size: 14pt; color: #00007f;">sgCObject* &nbsp; sgSurfaces::LinearSurfaceFromSections(const sgC2DObject&amp; firstSide, const sgC2DObject&amp; secondSide, double firstParam, bool &nbsp; isClose)</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Creates a surface or a solid by moving the end points of a line segment along two different curves.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">firstSide</span><span style="font-size: 12pt;"> - </span><span class="f_Heading1" style="font-weight: normal;">path </span><span style="font-size: 12pt;">curve for the first end point of the ruling line segment,</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">secondSide</span><span class="f_Heading1" style="font-weight: normal;"> - &nbsp;path </span><span style="font-size: 12pt;">curve for the second end point of the ruling line segment,</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">firstParam</span><span style="font-size: 12pt;"> - parameter of the point on the first path curve connecting with the start point on the second path curve; this parameter defines the spiral degree of the new object and takes the value from 0 to 1. The point on the object can be found using the <a href="2d_getpointfromcoefficient.html" class="topiclink">GetPointFromCoefficient()</a> function. This parameter is ignored if </span><span class="f_Heading1" style="font-weight: normal;">the firstSide </span><span style="font-size: 12pt;">object</span><span class="f_Heading1" style="font-weight: normal;"> </span><span style="font-size: 12pt;">is not closed .</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">isClose</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;"> whether to close to a solid in case </span><span class="f_Heading1" style="font-weight: normal;">firstSide </span><span style="font-size: 12pt;">and </span><span class="f_Heading1" style="font-weight: normal;">secondSide </span><span style="font-size: 12pt;">are flat and closed curves without self-intersections.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Returns the pointer to a newly created object. If the function fails NULL is returned.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Explanation:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">While constructing objects using this function special attention should be paid to the start parameter of the first curve and to orientation (can be changed using</span><span style="font-size: 12pt;"> <a href="2d_changeorient.html" class="topiclink">ChangeOrient()</a></span><span class="f_Heading1" style="font-weight: normal;">) of both the curves. Let's illustrate it with examples.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">We have two closed curves which can be used as path curves to create a surface:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><img src="lin_1.png" width="203" height="226" alt="lin_1" style="border:none" /></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">The start points of both curves are indicated red and objects orientation as arrows.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Below you can see different cases of various spirals of obtained surfaces with different initial parameters of the first curve</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"><table style="background-color:#ffffff; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:210px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">firsParam = 0</span></p>
+</td>
+<td style="vertical-align:top; width:222px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">fistParam = 0.12</span></p>
+</td>
+<td style="vertical-align:top; width:262px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 12pt;">firstParam = 0.75</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:210px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="lin_2.png" width="203" height="219" alt="lin_2" style="border:none" /></p>
+</td>
+<td style="vertical-align:top; width:222px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="lin_22.png" width="207" height="213" alt="lin_22" style="border:none" /></p>
+</td>
+<td style="vertical-align:top; width:262px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="lin_23.png" width="194" height="215" alt="lin_23" style="border:none" /></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">It's obvious that the objects will have different spiral degrees.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Special attention should be paid to the objects orientation. A new object is created by moving the end point of a line segment along two path curves. But along each curve each end point moves in the curve direction. You can change the object direction round using the </span><span style="font-size: 12pt;"><a href="2d_changeorient.html" class="topiclink">ChangeOrient()</a></span><span class="f_Heading1" style="font-weight: normal;"> function.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">The wrong orientation may cause such results:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"><table style="background-color:#ffffff; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:327px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="lin_err1.png" width="323" height="301" alt="lin_err1" style="border:none" /></p>
+</td>
+<td style="vertical-align:top; width:384px; padding:0px; border:solid 1px #000000;"><p style="text-align: center;"><img src="lin_err2.png" width="374" height="272" alt="lin_err2" style="border:none" /></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">In case of unclosed objects only objects orientation is considered.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="2d_getpointfromcoefficient.html" class="topiclink">GetPointFromCoeficient()</a>  <a href="2d_changeorient.html" class="topiclink">ChangeOrient()</a></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

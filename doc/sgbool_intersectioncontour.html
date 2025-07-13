@@ -1,0 +1,104 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Algorithms &gt; sgBoolean &gt; IntersectionContour</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sgbool_intersectioncontour.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="algs.html">Algorithms</a> &gt; <a href="sgboolean.html">sgBoolean</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"> <span style="font-size: 14pt;"> </span><span style="font-size: 14pt; color: #00007f;">sgCGroup* &nbsp; sgBoolean::IntersectionContour(const sgC3DObject&amp; aOb, const sgC3DObject&amp; bOb)</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt;">Creates a group of line segments which are the intersection of two 3D objects surfaces, i.e. the line segments with the points lying </span><span class="f_Heading1" style="font-weight: normal;">both </span><span style="font-size: 12pt;">on the surface of the first and of the second </span><span class="f_Heading1" style="font-weight: normal;">object</span><span style="font-size: 12pt;">.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">aOb</span><span style="font-size: 12pt;"> - first object,</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">bOb</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">second object.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Returns the pointer to a group of line segments which are the intersection of the arguments surfaces. If the objects surfaces are not intersecting or in case of an internal error the function returns NULL.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-style: italic; color: #00007f;">Note</span><span style="font-size: 12pt; font-style: italic;">:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; font-style: italic;">An internal error may occur in case you call this function for </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">the </span><span style="font-size: 12pt; font-style: italic;">surfaces </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">or solids with self-intersections </span><span style="font-size: 12pt; font-style: italic;">(these solids may be constructed, for example, by a number of kinematic operations). </span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-style: italic; font-weight: normal;">The function for correcting self-intersections of solids is planned in the next library version.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="sgcgroup.html" class="topiclink">sgCGroup</a>  &nbsp; <a href="ex_bool_int_cont.html" class="topiclink">EXAMPLE</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
