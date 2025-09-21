@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Objects &gt; sgCObject &gt; sgC3DObject &gt; Methods &gt; SetMaterial</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "3d_setmaterial.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="ierarh.html">Objects</a> &gt; <a href="sgcobject.html">sgCObject</a> &gt; <a href="sgc3dobject.html">sgC3DObject</a> &gt; <a href="sg3d_metods.html">Methods</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"> <span style="font-size: 14pt;"> </span><span style="font-size: 14pt; color: #00007f;"> void &nbsp; &nbsp;sgC3DObject::SetMaterial(const SG_MATERIAL&amp; newMat) const</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Sets a new material to the object.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">newMat</span><span style="font-size: 12pt;"> -</span><span class="f_Heading1" style="font-weight: normal;"> </span><span style="font-size: 12pt;">material for the object - is an </span><span class="f_Heading1" style="font-weight: normal;">SG_MATERIAL structure object</span><span style="font-size: 12pt;">.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt;">The description of this structure:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">typedef &nbsp;struct</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">{</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;int &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MaterialIndex;</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TextureScaleU;</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TextureScaleV;</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TextureShiftU;</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TextureShiftV;</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;double &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TextureAngle;</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;bool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TextureSmooth;</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;bool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TextureMult;</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;SG_MIX_COLOR_TYPE &nbsp; &nbsp; MixColorType;</span></p>
+<p style="margin: 0px 0px 0px 102px;"><span style="font-size: 12pt; color: #00007f;"> &nbsp;SG_UV_TYPE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TextureUVType;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">} SG_MATERIAL;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">MaterialIndex</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">the number of the material in the library defined by the user.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">TextureScaleU - </span><span class="f_Heading1" style="font-weight: normal;">texture coefficient of stretch along the U coordinate.</span><span style="font-size: 12pt;"> Is considered when calculating texture coordinates for each triangle.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">TextureScaleV - </span><span class="f_Heading1" style="font-weight: normal;">texture coefficient of stretch along the V coordinate.</span><span style="font-size: 12pt;"> Is considered when calculating texture coordinates for each triangle.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">TextureShiftU - </span><span class="f_Heading1" style="font-weight: normal;">texture shift along the U coordinate.</span><span style="font-size: 12pt;"> Is considered when calculating texture coordinates for each triangle.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">TextureShiftV - </span><span class="f_Heading1" style="font-weight: normal;">texture shift along the V coordinate.</span><span style="font-size: 12pt;"> Is considered when calculating texture coordinates for each triangle.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">TextureAngle - </span><span style="font-size: 12pt;">texture rotation angle </span><span class="f_Heading1" style="font-weight: normal;">when overlapping on the object</span><span style="font-size: 12pt;">. Is considered when calculating texture coordinates for each triangle.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">TextureSmooth</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">whether to smooth the texture when displaying. This flag is necessary only </span><span class="f_Heading1" style="font-weight: normal;">for </span><span style="font-size: 12pt;">saving the object properties from the application using sgCore.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">TextureMult</span><span class="f_Heading1" style="font-weight: normal;"> - whether to multiply the texture when overlapping on the object</span><span style="font-size: 12pt;">. This flag is necessary only </span><span class="f_Heading1" style="font-weight: normal;">for </span><span style="font-size: 12pt;">saving the object properties from the application using sgCore.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">MixColorType - </span><span class="f_Heading1" style="font-weight: normal;">color mixing type of the material and of the object</span><span style="font-size: 12pt;">.</span><span class="f_Heading1" style="font-weight: normal;"> </span><span style="font-size: 12pt;">Can have the following values: </span><span style="font-size: 12pt; color: #00007f;">SG_MODULATE_MIX_TYPE </span><span style="font-size: 12pt;">(modulate the colors)</span><span style="font-size: 12pt; color: #00007f;">, SG_BLEND_MIX_TYPE </span><span style="font-size: 12pt;">(blend the colors) or </span><span style="font-size: 12pt; color: #00007f;">SG_REPLACE_MIX_TYPE</span><span style="font-size: 12pt;"> (replace the object color with the color of the material or the texture). This</span><span class="f_Heading1" style="font-weight: normal;"> structure field</span><span style="font-size: 12pt;"> is necessary only </span><span class="f_Heading1" style="font-weight: normal;">for </span><span style="font-size: 12pt;">saving the object properties from the application using sgCore.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">TextureUVType - </span><span class="f_Heading1" style="font-weight: normal;">t</span><span style="font-size: 12pt;">ype of overlapping texture on the object. Can have the following values: </span><span style="font-size: 12pt; color: #00007f;">SG_CUBE_UV_TYPE </span><span style="font-size: 12pt;">(texture overlapping along the axes)</span><span style="font-size: 12pt; color: #00007f;">, SG_SPHERIC_UV_TYPE </span><span style="font-size: 12pt;">(spherical type of the texture overlapping) or </span><span style="font-size: 12pt; color: #00007f;">SG_CYLINDER_UV_TYPE </span><span style="font-size: 12pt;">(cylindrical type of the texture overlapping). </span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">This structure field is necessary </span><span style="font-size: 12pt;">to calculate texture coordinates for each </span><span class="f_Heading1" style="font-weight: normal;">object </span><span style="font-size: 12pt;">triangle.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">This function changes the texture coordinates array for each object triangle </span><span style="font-size: 12pt;">- </span><span style="font-size: 12pt; color: #00007f;">allUV (</span><span class="f_Heading1" style="font-weight: normal;">read t</span><span style="font-size: 12pt;">he </span><span style="font-size: 12pt; color: #00007f;">SG_ALL_TRIANGLES</span><span style="font-size: 12pt;"> </span><span class="f_Heading1" style="font-weight: normal;">structure description at </span><span style="font-size: 12pt;"><a href="3d_gettriangles.html" class="topiclink">GetTriangles()</a></span><span style="font-size: 12pt; color: #00007f;">)</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt;">No values.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"> <a href="3d_gettriangles.html" class="topiclink">GetTriangles</a> &nbsp; <a href="3d_getmaterial.html" class="topiclink">GetMaterial</a>  </p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

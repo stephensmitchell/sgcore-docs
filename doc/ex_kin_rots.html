@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Examples &gt; Kinematic &gt; Surfaces of revolution</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "ex_kin_rots.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="ex.html">Examples</a> &gt; <a href="examp_kin.html">Kinematic</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"><span style="font-size: 14pt; color: #00007f;">Surfaces of revolution.</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">Let's create a surface of revolution. An unclosed spline will be the rotated contour.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">This code creates a spline:</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';">SG_POINT tmpPnt; </span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">SG_SPLINE* spl2 = SG_SPLINE::Create();</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">tmpPnt.x = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">1.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.y = -</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.z = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">spl2-&gt;AddKnot(tmpPnt,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">tmpPnt.x = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.y = -</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.z = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">spl2-&gt;AddKnot(tmpPnt,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">tmpPnt.x = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.y = -</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">1.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.z = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">spl2-&gt;AddKnot(tmpPnt,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">tmpPnt.x = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.y = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">1.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.z = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">spl2-&gt;AddKnot(tmpPnt,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">tmpPnt.x = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.y = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">4.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.z = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">spl2-&gt;AddKnot(tmpPnt,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">4</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">tmpPnt.x =</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">4.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.y = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5.0</span><span style="font-size: 8pt; font-family: 'Courier New';">; tmpPnt.z = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">spl2-&gt;AddKnot(tmpPnt,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">sgCSpline* spl2_obj = sgCreateSpline(*spl2);</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">sgGetScene()-&gt;AttachObject(spl2_obj);</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">spl2_obj-&gt;SetAttribute(SG_OA_COLOR,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">12</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">spl2_obj-&gt;SetAttribute(SG_OA_LINE_THICKNESS, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">SG_SPLINE::Delete(spl2);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">Let's rotate the contour around the axis lying on the </span><span style="font-size: 12pt;">(0, 0, 0) </span><span class="f_Heading1" style="font-weight: normal;">and</span><span style="font-size: 12pt;"> (0, -2, 0)</span><span class="f_Heading1" style="font-weight: normal;"> points. The rotation angle will be 250 degrees:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; SG_POINT p1 = {</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">,-</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2</span><span style="font-size: 8pt; font-family: 'Courier New';">,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">};</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="width:18px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">SG_POINT p2 = {</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">};</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="width:18px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">sgC3DObject* rO = (sgC3DObject*)sgKinematic::Rotation(*spl2_obj,p1,p2,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">250</span><span style="font-size: 8pt; font-family: 'Courier New';">,</span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">false</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="width:18px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">sgGetScene()-&gt;AttachObject(rO);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="width:18px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">rO-&gt;SetAttribute(SG_OA_COLOR,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span class="f_Heading1" style="font-weight: normal;">Then we'll move the obtained surface:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; SG_VECTOR transV1 = {-</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 8pt; font-family: 'Courier New';">,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">,</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">};</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="width:18px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">rO-&gt;InitTempMatrix()-&gt;Translate(transV1);</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="width:18px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">rO-&gt;ApplyTempMatrix();</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="width:18px">&nbsp;</span><span style="font-size: 8pt; font-family: 'Courier New';">rO-&gt;DestroyTempMatrix();</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="sgkin_rotation.html" class="topiclink">sgKinematic::Rotation</a> &nbsp; </p>
+<p style="margin: 0px 0px 0px 24px;"><a href="sgcspline.html" class="topiclink">sgCSpline</a> &nbsp;  <a href="sgcspline_create.html" class="topiclink">sgCSpline::Create</a>  <a href="sg_spline.html" class="topiclink">SG_SPLINE</a> </p>
+<p style="margin: 0px 0px 0px 24px;"><a href="sgcscene_getscene.html" class="topiclink">sgGetScene</a>  <a href="sgcscene_attachobject.html" class="topiclink">sgCScene::AttachObject</a> &nbsp; <a href="sgcobject_setattribute.html" class="topiclink">sgCObject::SetAttribute</a></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 14pt; color: #00007f;">Illustration:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><img src="kin_ros.png" width="289" height="252" alt="kin_roS" style="border:none" /></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

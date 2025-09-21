@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Objects</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "ierarh.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 42px;"><span style="font-size: 14pt; color: #00007f;">Objects</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="font-size: 12pt;">The </span><span style="font-size: 12pt; font-style: italic;">Object </span><span class="f_Heading1" style="font-weight: normal;">concept </span><span style="font-size: 12pt;">alongside with <a href="geometries.html" class="topiclink">Geometry</a></span><span style="font-size: 14pt; color: #00007f;"> </span><span style="font-size: 12pt;">is </span><span class="f_Heading1" style="font-weight: normal;">the</span><span style="font-size: 12pt;"> main co</span><span class="f_Heading1" style="font-weight: normal;">ncept of</span><span style="font-size: 12pt;"> </span><span class="f_Heading1" style="font-weight: normal;">sgCore. </span><span style="font-size: 12pt;">When </span><span style="font-size: 12pt; font-style: italic;">geometry</span><span style="font-size: 12pt;"> </span><span class="f_Heading1" style="font-weight: normal;">is an accurate mathematical description </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">object </span><span style="font-size: 12pt;">is an approximation for reflectin</span><span class="f_Heading1" style="font-weight: normal;">g the</span><span style="font-size: 12pt;"> possibility on a computer screen. All the operations in </span><span class="f_Heading1" style="font-weight: normal;">sgCore </span><span style="font-size: 12pt;">are made with objects not with geometries.</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="font-size: 12pt;">A two-dimensional object (in 3D) is just a number of line segments in sgCore. A three-dimensional object is a number of triangles.</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span class="f_Heading1" style="font-weight: normal;">Unlike the </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">geometry </span><span class="f_Heading1" style="font-weight: normal;">concept which is all-sufficient the </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">object</span><span class="f_Heading1" style="font-weight: normal;"> concept is not all-sufficient and directly depends on its basic geometry. We can always get an object with the given accuracy by geometry. That is why each sgCore object stores its own geometry.</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span class="f_Heading1" style="font-weight: normal;">The objects are divided into the following classes by a type of the realized geometry:</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="font-size: 14pt; color: #00007f;">Objects classes hierarchy</span></p>
+<p style="margin: 0px 0px 0px 132px;"><map name="map1" id="map1"><area shape="rect" coords="83,302,195,324" href="sgc3dobject.html" alt="" /><area shape="rect" coords="80,582,194,604" href="sgcgroup.html" alt="" /><area shape="rect" coords="163,537,285,561" href="sgcsphericband.html" alt="" /><area shape="rect" coords="163,505,283,529" href="sgcellipsoid.html" alt="" /><area shape="rect" coords="165,474,284,496" href="sgctorus.html" alt="" /><area shape="rect" coords="166,442,283,467" href="sgccone.html" alt="" /><area shape="rect" coords="165,411,283,433" href="sgccylinder.html" alt="" /><area shape="rect" coords="165,379,285,402" href="sgcsphere.html" alt="" /><area shape="rect" coords="165,345,284,368" href="sgcbox.html" alt="" /><area shape="rect" coords="164,256,283,279" href="sgccontour.html" alt="" /><area shape="rect" coords="165,226,282,247" href="sgcspline.html" alt="" /><area shape="rect" coords="164,192,282,216" href="sgcarc.html" alt="" /><area shape="rect" coords="164,162,281,185" href="sgccircle.html" alt="" /><area shape="rect" coords="168,130,278,151" href="sgcline.html" alt="" /><area shape="rect" coords="81,89,194,112" href="sgc2dobject.html" alt="" /><area shape="rect" coords="82,47,193,70" href="sgcpoint.html" alt="" /><area shape="rect" coords="3,1,99,24" href="sgcobject.html" alt="" /></map><img src="ierarh14.jpg" width="287" height="606" alt="ierarh14" style="border:none" usemap="#map1" /></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 42px;"><span style="color: #000000;">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

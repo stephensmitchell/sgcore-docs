@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Objects &gt; sgCObject &gt; sgC2DObject &gt; sgCContour &gt; BreakContour</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+   <script type="text/javascript" src="sgcore_2_popup_html.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sgccontour_breakcontour.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="ierarh.html">Objects</a> &gt; <a href="sgcobject.html">sgCObject</a> &gt; <a href="sgc2dobject.html">sgC2DObject</a> &gt; <a href="sgccontour.html">sgCContour</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"> <span style="font-size: 14pt;"> </span><span style="font-size: 14pt; color: #00007f;">bool &nbsp; sgCContour::BreakContour(sgCObject** objcts)</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Takes the contour to component parts. </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">objcts - </span><span style="font-size: 12pt;">buffer to put the contour component parts. </span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">You should allocate the memory for an array of objects pointers beforehand. The number of the elements in this array must be equal to the contour child objects</span><span style="font-size: 12pt; font-style: italic;"> (returned by <a href="sgccontour_getchildrenlist.html" class="topiclink">GetChildrenList</a>-</span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">&gt;</span><span style="font-size: 12pt; font-style: italic;"><a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_1260220789, this);" class="popuplink">GetCount()</a></span><span class="f_Heading1" style="font-style: italic; font-weight: normal;">).</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Returns </span><span style="font-size: 12pt; color: #00007f;">false</span><span style="font-size: 12pt;"> if the function fails, otherwise </span><span style="font-size: 12pt; color: #00007f;">true</span><span class="f_Heading1" style="font-weight: normal;">. The function argument is filled with the pointers to child objects.</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Example:</span></p>
+<p style="margin: 0px 0px 0px 84px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New'; font-style: italic; color: #000080;">/*Build contour*/</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">sgCObject* &nbsp; objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">4</span><span style="font-size: 8pt; font-family: 'Courier New';">];</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">] = sgCreateLine(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5.0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 8pt; font-family: 'Courier New';">] = sgCreateLine(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">5.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">10.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2</span><span style="font-size: 8pt; font-family: 'Courier New';">] = sgCreateLine(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">10.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">6.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">13.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">15.0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">] = sgCContour::CreateContour(&amp;objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">],</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">1</span><span style="font-size: 8pt; font-family: 'Courier New';">] = sgCreateLine(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">6.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">13.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">15.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">20.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">30.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">75.0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">2</span><span style="font-size: 8pt; font-family: 'Courier New';">] = sgCreateLine(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">20.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">30.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">75.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">10.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">6.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, -</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3</span><span style="font-size: 8pt; font-family: 'Courier New';">] = sgCreateLine(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">10.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">6.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, -</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">sgCContour* resCont = sgCContour::CreateContour(&amp;objcts[</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">],</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">4</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; </span><span style="font-size: 8pt; font-family: 'Courier New'; font-style: italic; color: #000080;">/*Break contour*/</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">const</span><span style="font-size: 8pt; font-family: 'Courier New';"> </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">int</span><span style="font-size: 8pt; font-family: 'Courier New';"> ChildsCount = resCont-&gt;GetChildrenList()-&gt;GetCount();</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;sgCObject** &nbsp;allChilds = (sgCObject**)malloc(ChildsCount*</span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">sizeof</span><span style="font-size: 8pt; font-family: 'Courier New';">(sgCObject*));</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">  </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">if</span><span style="font-size: 8pt; font-family: 'Courier New';"> (!resCont-&gt;BreakContour(allChilds))</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;{</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp;assert(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;}</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">  </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">const</span><span style="font-size: 8pt; font-family: 'Courier New';"> </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">int</span><span style="font-size: 8pt; font-family: 'Courier New';"> sz = resCont-&gt;GetChildrenList()-&gt;GetCount();</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;assert(sz==</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;sgDeleteObject(resCont);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';">  </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">for</span><span style="font-size: 8pt; font-family: 'Courier New';"> (</span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">int</span><span style="font-size: 8pt; font-family: 'Courier New';"> i=</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0</span><span style="font-size: 8pt; font-family: 'Courier New';">;i&lt;ChCnt;i++)</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;{</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; sgGetScene()-&gt;AttachObject(allChilds[i]);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;}</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;free(allChilds);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="sgccontour_createcontour.html" class="topiclink">CreateContour</a> </p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

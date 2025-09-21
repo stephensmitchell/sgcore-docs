@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Objects &gt; sgCObject &gt; Methods &gt; SetUserGeometry</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      body, html { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF;              
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sgcobject_setusergeometry.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="ierarh.html">Objects</a> &gt; <a href="sgcobject.html">sgCObject</a> &gt; <a href="methods_sgcobj.html">Methods</a></div>
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p style="margin: 0px 0px 0px 30px;"> <span style="font-size: 14pt;"> </span><span style="font-size: 14pt; color: #00007f;">bool &nbsp; sgCObject::SetUserGeometry(const char* user_geometry_ID,</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-size: 14pt; color: #00007f;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;const unsigned short user_geometry_size,</span></p>
+<p><span style="font-size: 14pt; color: #00007f;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;const void* user_geometry_data)</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Description:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">Sets a user-defined geometry to the object.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Arguments:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">user_geometry_ID</span><span class="f_Heading1" style="font-weight: normal;"> - </span><span style="font-size: 12pt;">the identifier of the user-defined geometry, 39 characters string (</span><span class="f_Heading1" style="font-weight: normal;">GUID</span><span style="font-size: 12pt;">)</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">user_geometry_size </span><span class="f_Heading1" style="font-weight: normal;">- </span><span style="font-size: 12pt;">size of the user-defined geometry,</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="font-size: 12pt; color: #00007f;">user_geometry_data </span><span class="f_Heading1" style="font-weight: normal;">- </span><span style="font-size: 12pt;">pointer to the beginning of the block of data containing the user-defined geometry</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Returned value:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span class="f_Heading1" style="font-weight: normal;">If succeed the function returns </span><span style="font-size: 12pt; color: #00007f;">true</span><span style="font-size: 12pt;">, otherwise </span><span style="font-size: 12pt; color: #00007f;">false.</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; color: #00007f;">Example:</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';">sgCPoint* &nbsp; &nbsp; pnt = sgCreatePoint(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">, </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">0.0</span><span style="font-size: 8pt; font-family: 'Courier New';">);</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">typedef</span><span style="font-size: 8pt; font-family: 'Courier New';"> </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">struct</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';">{</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;  </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">int</span><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; first_field;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;  </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">char</span><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; &nbsp; second_field;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;  </span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">double</span><span style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;third_field;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';">} &nbsp;USER_DATA;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';">USER_DATA user_data;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';">user_data.first_field = -</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">1000</span><span style="font-size: 8pt; font-family: 'Courier New';">;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';">user_data.second_field = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">'c'</span><span style="font-size: 8pt; font-family: 'Courier New';">;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';">user_data.third_field = </span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">3.14159265</span><span style="font-size: 8pt; font-family: 'Courier New';">;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 8pt; font-family: 'Courier New';">pnt-&gt;SetUserGeometry(</span><span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;">&quot;{BE18FFEE-77FB-40f8-B7D1-570D316F696A}&quot;</span><span style="font-size: 8pt; font-family: 'Courier New';">,</span><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">sizeof</span><span style="font-size: 8pt; font-family: 'Courier New';">(USER_DATA), &amp;user_data);</span></p>
+<p style="margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">See also:</p>
+<p style="margin: 0px 0px 0px 24px;"><a href="sgcobject_getusergeometry.html" class="topiclink">GetUserGeometry</a> &nbsp; <a href="sgcobject_getusergeometryid.html" class="topiclink">GetUserGeometryID</a></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
